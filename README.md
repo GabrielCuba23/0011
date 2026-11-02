@@ -20,3 +20,14 @@ Desde `/workspace/0011`: `npm start` (puerto 3000; configurable con `PORT`). Eje
 Permitir en la red `enfen.imarpe.gob.pe` y `observatorio.senamhi.gob.pe`, revisar sus mecanismos públicos y condiciones, y validar un conector antes de anunciar sincronización. Para imágenes, integrar un servicio de análisis con credenciales del servidor y consentimiento para enviar imágenes; conservar evidencia, procedencia y nivel de confianza. No inferir población afectada contando personas visibles.
 
 No es un sistema oficial de alertas. Las fichas distinguen cifras reportadas y estimadas; todos los registros quedan pendientes de contraste oficial. La ubicación de una imagen no se confirma con coordenadas ingresadas manualmente.
+
+
+## Dashboard automático (v0.2)
+
+El dashboard filtra por las 25 regiones y por fuente. Las noticias proceden de búsquedas temáticas en Google News RSS (26 consultas), se deduplican por URL y se filtran por fecha de publicación en una ventana móvil de 24 horas. Una mención de región no confirma que el evento haya ocurrido allí. Se puede excluir contenido sin región identificada.
+
+`python scripts/collect.py` recopila las fuentes sin dependencias externas y escribe `data/dashboard.json`. `node scripts/build.mjs` genera el sitio estático en `dist/`. GitHub Actions ejecuta ambos pasos en cada publicación y cada hora (minuto 17); GitHub puede retrasar u omitir ejecuciones programadas. El botón de recarga descarga el último archivo publicado, no dispara una nueva recopilación.
+
+SENAMHI se consulta mediante la API pública `https://servicios.senamhi.gob.pe/api/hydrology/warnings`, identificada en los módulos del portal; el esquema se valida antes de usarlo. La conectividad real está pendiente por los bloqueos del entorno. ENFEN y ANA utilizan por ahora extracción de enlaces documentales desde HTML; los paneles interactivos de ANA aún requieren un conector específico. Los documentos oficiales extraíbles se muestran separados de las noticias. Sin fecha verificada no se consideran publicaciones de las últimas 24 horas. Los errores, accesos limitados y hora de consulta se muestran por fuente. El extractor HTML no sustituye conectores para paneles interactivos de SENAMHI/ANA ni extrae caudales, niveles de riesgo o afectados de capturas. No se simulan datos. Las noticias vencidas desaparecen de la vista incluso si no se ha publicado una actualización.
+
+Pruebas del recopilador: `python -m unittest discover -s test -p 'test_*.py'`. Los tests usan fixtures sintéticos identificados dentro del código de prueba; nunca se publican como noticias.

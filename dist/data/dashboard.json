@@ -1,0 +1,61 @@
+{
+  "updatedAt": "2026-11-02T15:15:18.957055+00:00",
+  "regions": [
+    "Amazonas",
+    "Áncash",
+    "Apurímac",
+    "Arequipa",
+    "Ayacucho",
+    "Cajamarca",
+    "Callao",
+    "Cusco",
+    "Huancavelica",
+    "Huánuco",
+    "Ica",
+    "Junín",
+    "La Libertad",
+    "Lambayeque",
+    "Lima",
+    "Loreto",
+    "Madre de Dios",
+    "Moquegua",
+    "Pasco",
+    "Piura",
+    "Puno",
+    "San Martín",
+    "Tacna",
+    "Tumbes",
+    "Ucayali"
+  ],
+  "sources": [
+    {
+      "name": "ENFEN",
+      "url": "https://enfen.imarpe.gob.pe/",
+      "state": "error",
+      "message": "No se pudo consultar: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "checkedAt": "2026-11-02T15:15:18.957055+00:00"
+    },
+    {
+      "name": "SENAMHI",
+      "url": "https://observatorio.senamhi.gob.pe/gestion-riesgo-desastres/avisos-hidrologicos",
+      "state": "error",
+      "message": "No se pudo consultar: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "checkedAt": "2026-11-02T15:15:18.957055+00:00"
+    },
+    {
+      "name": "ANA · ONRH",
+      "url": "https://snirh.ana.gob.pe/onrh/Reportes.aspx?R=PRIOS",
+      "state": "error",
+      "message": "No se pudo consultar: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "checkedAt": "2026-11-02T15:15:18.957055+00:00"
+    },
+    {
+      "name": "Noticias · Google News RSS",
+      "url": "https://news.google.com/",
+      "state": "error",
+      "message": "Consultas completadas: 0/26. Solo publicaciones fechadas dentro de las últimas 24 horas. Perú: <urlopen error Tunnel connection failed: 403 Forbidden> | Amazonas: <urlopen error Tunnel connection failed: 403 Forbidden> | Áncash: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "checkedAt": "2026-11-02T15:15:18.957055+00:00"
+    }
+  ],
+  "items": []
+}
