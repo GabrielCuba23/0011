@@ -2,7 +2,7 @@ import http from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {createHash,timingSafeEqual} from 'node:crypto';
-import {AnalysisError,analyzeImage,enrichLocations} from './lib/analyze.js';
+import {AnalysisError,analyzeImage,enrichLocations,diagnoseProvider} from './lib/analyze.js';
 const root=fileURLToPath(new URL('./public/',import.meta.url));
 const files={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/report.js':'report.js','/dashboard.js':'dashboard.js','/image-analysis.js':'image-analysis.js','/data/dashboard.json':'../data/dashboard.json'};
 const types={html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8',json:'application/json; charset=utf-8'};
@@ -19,6 +19,12 @@ http.createServer(async(req,res)=>{
  const path=new URL(req.url,'http://localhost').pathname;
  if(path==='/api/health')return json(200,{status:'ok',version:'0.3.0'});
  if(path==='/api/capabilities')return json(200,{imageAnalysis:Boolean(process.env.GEMINI_API_KEY&&process.env.VIGIA_ACCESS_TOKEN),provider:'Gemini',requiresAccessCode:true});
+ if(path==='/api/diagnostics/ai'){
+  if(req.method!=='GET')return json(405,{error:'Usa GET.'});
+  if(!process.env.VIGIA_ACCESS_TOKEN||!authorized(req))return json(401,{error:'La clave de acceso del observatorio no es válida.'});
+  try{return json(200,await diagnoseProvider({apiKey:process.env.GEMINI_API_KEY,model:process.env.GEMINI_MODEL||'gemini-2.5-flash'}));}
+  catch(e){return json(e instanceof AnalysisError?e.status:502,{error:e instanceof AnalysisError?e.message:'No se pudo comprobar el proveedor de IA.',code:e.code||'DIAGNOSTIC_FAILED',providerStatus:e.providerStatus||null});}
+ }
  if(path==='/api/analyze-image'){
   if(req.method!=='POST')return json(405,{error:'Usa POST.'});
   if(!process.env.GEMINI_API_KEY||!process.env.VIGIA_ACCESS_TOKEN)return json(503,{error:'El análisis todavía no está activado. Falta configurar el servicio de IA y su clave de acceso en el servidor.'});
@@ -30,7 +36,7 @@ http.createServer(async(req,res)=>{
   if(active>=2||usage.count>=limit)return json(429,{error:'El servicio está ocupado o alcanzó su límite horario. Intenta más tarde.'});
   active++;usage.count++;
   try{const input=await body(req);const result=await analyzeImage(input,{apiKey:process.env.GEMINI_API_KEY,model:process.env.GEMINI_MODEL||'gemini-2.5-flash'});return json(200,await enrichLocations(result));}
-  catch(e){return json(e instanceof AnalysisError?e.status:500,{error:e instanceof AnalysisError?e.message:'No se pudo completar el análisis.'});}finally{active--;}
+  catch(e){return json(e instanceof AnalysisError?e.status:500,{error:e instanceof AnalysisError?e.message:'No se pudo completar el análisis.',code:e.code||'ANALYSIS_FAILED',providerStatus:e.providerStatus||null});}finally{active--;}
  }
  if(!['GET','HEAD'].includes(req.method))return json(405,{error:'Método no permitido.'});
  if(!files[path]){res.writeHead(404);return res.end('No encontrado');}
