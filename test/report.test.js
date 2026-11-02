@@ -1,0 +1,6 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {formatReport,validCoordinates} from '../public/report.js';
+test('keeps reported accommodation distinct from total affected',()=>{const text=formatReport({region:'Tumbes',river:'Zarumilla',bridge:'Bolsico',sector:'Puerto Perú',people:'50 a 70',impactType:'acogidas reportadas',impactDetail:'Total de afectados por confirmar.'});assert.match(text,/50 a 70 personas \(acogidas reportadas\)/);assert.match(text,/Total de afectados por confirmar/);assert.match(text,/puente Bolsico, sector Puerto Perú/);assert.match(text,/Verificación: pendiente/);});
+test('falls back to sector and district without inventing a bridge or population',()=>{const text=formatReport({region:'Tumbes',sector:'Puerto Perú',district:'Por confirmar'});assert.match(text,/Puerto Perú, Por confirmar/);assert.doesNotMatch(text,/puente/);assert.match(text,/Afectación por confirmar/);});
+test('rejects absent, nonnumeric and out of bounds coordinates',()=>{for(const pair of [['',''],['abc','2'],['91','0'],['0','181']])assert.equal(validCoordinates(...pair),false);assert.equal(validCoordinates('-3.5','-80.3'),true);assert.equal(validCoordinates('0','0'),true);});
