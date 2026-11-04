@@ -1,35 +1,28 @@
 const byId=id=>document.getElementById(id);
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;};
-let payload;
+let payload,loadingFeed=false,queuedFeed=false;
 const date=value=>new Intl.DateTimeFormat('es-PE',{dateStyle:'medium',timeStyle:'short',timeZone:'America/Lima'}).format(new Date(value));
 const safe=url=>{try{return ['https:','http:'].includes(new URL(url).protocol);}catch{return false;}};
+function feedServer(){try{const custom=localStorage.getItem('vigia-analysis-server');if(custom)return new URL(custom).origin;}catch{}const current=new URL(location.href);return current.hostname.endsWith('github.io')?'https://vigia-peru.onrender.com':current.origin;}
 function renderDashboard(){
  if(!payload)return;
- const region=byId('region-filter').value;const institution=byId('institution-filter').value;
- const now=Date.now();const fresh=x=>x.publishedAt&&now-new Date(x.publishedAt).getTime()>=0&&now-new Date(x.publishedAt).getTime()<=86400000;
+ const region=byId('region-filter').value,institution=byId('institution-filter').value,now=Date.now();
+ const fresh=x=>x.publishedAt&&now-new Date(x.publishedAt).getTime()>=0&&now-new Date(x.publishedAt).getTime()<=86400000;
  const visible=payload.items.filter(x=>(!region||x.regions.includes(region)||(!x.regions.length&&byId('include-national').checked))&&(!institution||(institution==='news'?x.kind==='news':x.source===institution)));
- const news=visible.filter(x=>x.kind==='news'&&fresh(x));const official=visible.filter(x=>x.kind==='official');
+ const news=visible.filter(x=>x.kind==='news'&&fresh(x)),official=visible.filter(x=>x.kind==='official');
  byId('news-count').textContent=news.length;byId('official-count').textContent=official.length;byId('region-title').textContent=region||'Todo el Perú';
- for(const [id,rows,empty] of [['news-items',news,'No hay noticias de las últimas 24 horas para esta selección. Comprueba el estado de las fuentes; esto no significa ausencia de eventos.'],['official-items',official,'No hay documentos extraídos para esta selección. Consulta los portales oficiales y revisa el estado de conexión.']]){
+ for(const [id,rows,empty] of [['news-items',news,'Sin noticias obtenidas para esta selección en las últimas 24 horas. Revisa el estado de las fuentes; no significa que no haya eventos.'],['official-items',official,'Sin documentos extraídos para esta selección. Revisa las fuentes oficiales.']]){
   const list=byId(id);list.replaceChildren();if(!rows.length)list.append(el('p',empty,'empty'));
-  for(const x of rows.slice(0,100)){
-   const card=el('article',null,'report-card');card.append(el('span',x.kind==='news'?'PRENSA · NO ES CONFIRMACIÓN OFICIAL':'DOCUMENTO OFICIAL · FECHA POR CONFIRMAR','tag'));
-   card.append(el('h3',x.title));card.append(el('p',x.source+' · '+(x.publishedAt?date(x.publishedAt)+' (hora Perú)':'No se incluye como publicación de las últimas 24 horas')));
-   if(x.kind==='official'&&x.summary)card.append(el('p',x.summary));
-   card.append(el('small',x.regions.length?'Mención geográfica: '+x.regions.join(', '):'Sin región identificada en el texto; puede tener alcance nacional.'));
-   if(x.retained)card.append(el('small','Documento de una consulta anterior; fuente sin actualización disponible.'));
-   if(safe(x.url)){const a=el('a','Leer en la fuente ↗');a.href=x.url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);}list.append(card);
-  }
+  for(const x of rows.slice(0,100)){const card=el('article',null,'report-card');card.append(el('span',x.kind==='news'?'PRENSA · SIN VERIFICACIÓN EDITORIAL':'DOCUMENTO OFICIAL · FECHA POR CONFIRMAR','tag'),el('h3',x.title),el('p',x.source+' · '+(x.publishedAt?date(x.publishedAt)+' (Perú)':'Fecha por confirmar')));if(x.summary)card.append(el('p',x.summary));card.append(el('small',x.regions.length?'Mención geográfica: '+x.regions.join(', '):'Sin región identificada.'));if(safe(x.url)){const a=el('a','Leer en la fuente ↗');a.href=x.url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);}const add=el('button','＋ Añadir a mesa','secondary');add.type='button';add.onclick=()=>{document.dispatchEvent(new CustomEvent('vigia:add-news',{detail:x}));add.textContent='En la mesa ✓';};card.append(add);list.append(card);}
  }
- const statuses=byId('source-status');statuses.replaceChildren();
- for(const s of payload.sources){const box=el('article',null,'source-card');box.append(el('span',s.state==='ok'?'CONSULTA COMPLETADA':s.state==='limited'?'COBERTURA PARCIAL':'SIN CONEXIÓN',s.state==='ok'?'tag':'tag warning'));box.append(el('h3',s.name),el('p',s.message),el('small','Consulta: '+date(s.checkedAt)));if(safe(s.url)){const a=el('a','Abrir portal ↗');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';box.append(a);}statuses.append(box);}
+ const statuses=byId('source-status');statuses.replaceChildren();for(const s of payload.sources){const box=el('article',null,'source-card');box.append(el('span',s.state==='ok'?'CONSULTA COMPLETADA':s.state==='limited'?'COBERTURA PARCIAL':'SIN CONEXIÓN',s.state==='ok'?'tag':'tag warning'),el('h3',s.name),el('p',s.message),el('small','Último intento: '+date(s.checkedAt)));if(s.lastSuccessAt)box.append(el('small','Último éxito: '+date(s.lastSuccessAt)));if(safe(s.url)){const a=el('a','Abrir portal ↗');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';box.append(a);}statuses.append(box);}
 }
-async function loadDashboard(){
- byId('dashboard-updated').textContent='Cargando información…';
- try{const res=await fetch(new URL('data/dashboard.json',location.href),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const data=await res.json();if(!Array.isArray(data.items)||!Array.isArray(data.sources)||!Array.isArray(data.regions))throw Error('Formato de datos inválido');payload=data;
+async function loadDashboard(force=false){if(loadingFeed){queuedFeed=true;return;}loadingFeed=true;byId('dashboard-updated').textContent='Consultando el servidor y las fuentes…';byId('refresh-dashboard').disabled=true;let fallback=false;
+ try{let data;try{const region=byId('region-filter').value;const res=await fetch(feedServer()+'/api/dashboard?'+new URLSearchParams({region,refresh:force?'1':'0'}),{cache:'no-store',signal:AbortSignal.timeout(120000)});if(!res.ok)throw Error();data=await res.json();}catch{fallback=true;const res=await fetch(new URL('data/dashboard.json',location.href),{cache:'no-store'});if(!res.ok)throw Error();data=await res.json();}if(!Array.isArray(data.items)||!Array.isArray(data.sources)||!Array.isArray(data.regions))throw Error();payload=data;
  const select=byId('region-filter');if(select.options.length===1)for(const region of data.regions){const option=el('option',region);option.value=region;select.append(option);}
- const age=Date.now()-new Date(data.updatedAt).getTime();byId('dashboard-updated').textContent='Última recopilación: '+date(data.updatedAt)+' (Perú). '+(age>7200000?'Datos sin actualizar hace más de 2 horas. ':'')+'Actualización programada cada hora, sujeta a disponibilidad de GitHub Actions.';renderDashboard();
- }catch{byId('dashboard-updated').textContent='No se pudieron cargar los datos. La recopilación puede no haberse publicado todavía. Recarga después del despliegue; revisa GitHub Actions si persiste.';}
+ const latest=Math.max(...data.sources.filter(x=>(x.name||'').startsWith('Noticias')&&(x.state==='ok'||x.state==='limited')).map(x=>Date.parse(x.lastSuccessAt||x.checkedAt)).filter(Number.isFinite),0);
+ byId('dashboard-updated').textContent=fallback?'Servidor en directo no disponible. Mostrando respaldo estático de '+date(data.updatedAt)+'. NO es una actualización en tiempo real.':`Consulta directa desde Render. ${latest?'Última consulta de noticias exitosa: '+date(new Date(latest))+'. ':'No hay respuesta exitosa reciente del feed de noticias. '}Consulta automática cada 5 minutos mientras el tablero esté abierto; caché por región de hasta 5 minutos. La publicación e indexación pueden retrasarse.`;renderDashboard();
+ }catch{byId('dashboard-updated').textContent='No se pudieron obtener datos del servidor ni del respaldo. No hay una actualización confirmada.';}finally{loadingFeed=false;byId('refresh-dashboard').disabled=false;if(queuedFeed){queuedFeed=false;loadDashboard();}}
 }
-for(const id of ['region-filter','institution-filter','include-national'])byId(id).addEventListener('change',renderDashboard);
-byId('refresh-dashboard').onclick=loadDashboard;loadDashboard();setInterval(()=>{if(payload)renderDashboard();},60000);
+for(const id of ['institution-filter','include-national'])byId(id).addEventListener('change',renderDashboard);
+byId('region-filter').addEventListener('change',()=>{renderDashboard();loadDashboard();});byId('refresh-dashboard').onclick=()=>loadDashboard(true);loadDashboard();setInterval(()=>{if(!document.hidden)loadDashboard();},300000);setInterval(()=>{if(payload)renderDashboard();},60000);

@@ -3,7 +3,7 @@ services:
     name: vigia-peru
     runtime: node
     plan: free
-    buildCommand: node --check server.js
+    buildCommand: npm ci
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
@@ -16,6 +16,6 @@ services:
       - key: ALLOWED_ORIGIN
         value: https://gabrielcuba23.github.io
       - key: GEMINI_MODEL
-        value: gemini-2.5-flash
+        value: gemini-flash-latest
       - key: NODE_USE_ENV_PROXY
         value: '1'

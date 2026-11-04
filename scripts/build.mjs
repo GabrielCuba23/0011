@@ -1,4 +1,4 @@
-import {readFile, mkdir, writeFile} from 'node:fs/promises';
+import {readFile, mkdir, writeFile, cp} from 'node:fs/promises';
 const root=new URL('../',import.meta.url);
 const read=path=>readFile(new URL(path,root),'utf8');
 let html=await read('public/index.html');
@@ -10,7 +10,9 @@ html=html.replace('<link rel="stylesheet" href="/style.css">','<style>'+await re
 .replace('<script type="module" src="/app.js"></script>','<script type="module">'+js+'</script>')
 .replace('class="brand" href="/"','class="brand" href="#"')
 .replace('<script type="module" src="/dashboard.js"></script>','<script type="module">'+await read('public/dashboard.js')+'</script>')
-.replace('<script type="module" src="/image-analysis.js"></script>','<script type="module">'+await read('public/image-analysis.js')+'</script>');
+.replace('<script type="module" src="/image-analysis.js"></script>','<script type="module">'+await read('public/image-analysis.js')+'</script>')
+.replace('<script type="module" src="/desk.js"></script>','<script type="module">'+await read('public/desk.js')+'</script>')
+.replaceAll('href="/vendor/','href="./vendor/').replaceAll('src="/vendor/','src="./vendor/');
 await mkdir(new URL('dist/',root),{recursive:true});
 await writeFile(new URL('dist/index.html',root),html);
 await writeFile(new URL('dist/Vigia-Peru.html',root),html);
@@ -18,3 +20,5 @@ console.log('Sitio estático generado en dist/');
 
 await mkdir(new URL('dist/data/',root),{recursive:true});
 await writeFile(new URL('dist/data/dashboard.json',root),await read('data/dashboard.json'));
+
+await cp(new URL('public/vendor/',root),new URL('dist/vendor/',root),{recursive:true});
