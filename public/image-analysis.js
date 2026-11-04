@@ -1,14 +1,38 @@
 const imageEl=id=>document.getElementById(id);
 const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;};
-let imageFile=null,previewUrl=null,ready=false,busy=false,server='';
+let imageFile=null,previewUrl=null,ready=false,busy=false,server='',connectionAttempt=0;
+const savedAccessKey='vigia-access-v1';
 try{server=localStorage.getItem('vigia-analysis-server')||'';}catch{}
+if(!server&&(location.hostname||new URL(location.origin).hostname).endsWith('github.io'))server='https://vigia-peru.onrender.com';
 imageEl('analysis-server').value=server;
+imageEl('remember-analysis').checked=true;
 function baseUrl(){const value=imageEl('analysis-server').value.trim();const url=new URL(value||location.origin);if(url.username||url.password||url.search||url.hash||(!['https:'].includes(url.protocol)&&!(url.protocol==='http:'&&['localhost','127.0.0.1'].includes(url.hostname))))throw Error('Usa la dirección HTTPS del servidor, sin credenciales ni parámetros.');return url.origin;}
+try{const saved=JSON.parse(localStorage.getItem(savedAccessKey)||'null');if(saved&&saved.server===baseUrl()&&typeof saved.token==='string')imageEl('analysis-access').value=saved.token;}catch{}
 function updateButton(){imageEl('analyze-image').disabled=busy||!ready||!imageFile||!imageEl('analysis-access').value.trim()||!imageEl('image-consent').checked;imageEl('analyze-image').textContent=busy?'Analizando…':'Analizar imagen ↗';}
-async function checkConnection(){ready=false;updateButton();imageEl('analysis-connection').textContent='Comprobando servicio…';try{const base=baseUrl();const r=await fetch(base+'/api/capabilities',{signal:AbortSignal.timeout(10000),cache:'no-store'});if(!r.ok)throw Error('No se encontró el servicio de análisis.');const data=await r.json();if(!data.imageAnalysis)throw Error('Servidor conectado; falta activar el servicio de IA.');ready=true;server=base;imageEl('analysis-connection').textContent='Servicio de IA conectado · Gemini';try{localStorage.setItem('vigia-analysis-server',imageEl('analysis-server').value.trim());}catch{}}catch(e){imageEl('analysis-connection').textContent='Análisis sin activar';imageEl('analysis-status').textContent=e.message==='Servidor conectado; falta activar el servicio de IA.'?e.message:'Para analizar imágenes, conecta el servidor de Vigía en «Conectar servicio de análisis». GitHub Pages no ejecuta IA.';}updateButton();}
+function persistAccess(){
+ try{if(!imageEl('remember-analysis').checked){localStorage.removeItem(savedAccessKey);imageEl('access-storage-status').textContent='El acceso no se recordará después de cerrar o recargar la página.';return;}
+  if(!ready)return;localStorage.setItem(savedAccessKey,JSON.stringify({server:baseUrl(),token:imageEl('analysis-access').value.trim()}));imageEl('access-storage-status').textContent='Acceso recordado en este navegador. Se restaurará al recargar.';
+ }catch{imageEl('access-storage-status').textContent='El navegador no permitió guardar el acceso. Revisa sus permisos de almacenamiento.';}
+}
+async function checkConnection(){const attempt=++connectionAttempt;ready=false;updateButton();imageEl('analysis-connection').textContent='Comprobando servidor…';
+ try{const base=baseUrl();const r=await fetch(base+'/api/capabilities',{signal:AbortSignal.timeout(90000),cache:'no-store'});if(!r.ok)throw Error('El servidor no respondió. Comprueba su dirección y espera si Render está arrancando.');const data=await r.json();if(attempt!==connectionAttempt)return;
+  if(!data.imageAnalysis)throw Error('Servidor conectado; falta activar el servicio de IA.');
+  if(!data.authenticationCheck)throw Error('Render está ejecutando una versión anterior. Despliega la última versión del repositorio; la página y el servidor deben estar actualizados.');
+  const token=imageEl('analysis-access').value.trim();if(!token){imageEl('analysis-connection').textContent='Servidor disponible · falta iniciar acceso';imageEl('analysis-status').textContent='Introduce la clave del observatorio una vez y pulsa Comprobar conexión. Podrás recordarla en este navegador.';return;}
+  const auth=await fetch(base+'/api/auth/check',{headers:{Authorization:'Bearer '+token},signal:AbortSignal.timeout(15000),cache:'no-store'});if(attempt!==connectionAttempt)return;
+  if(auth.status===401)throw Error('La clave del observatorio no coincide con VIGIA_ACCESS_TOKEN en Render. Corrígela y vuelve a comprobar; no cambies la clave de Gemini.');
+  if(auth.status===404||auth.status===405)throw Error('La versión de Render todavía no incluye la validación de acceso. Despliega la última versión.');
+  if(!auth.ok)throw Error('No se pudo validar el acceso al servidor.');const access=await auth.json();if(!access.authenticated)throw Error('El servidor no confirmó el acceso.');
+  ready=true;server=base;imageEl('analysis-connection').textContent='Acceso al servidor validado';imageEl('analysis-status').textContent='Acceso validado. Adjunta una imagen y una pregunta para analizar. El estado de Google se comprueba al diagnosticar o generar un análisis.';
+  try{localStorage.setItem('vigia-analysis-server',base);}catch{}persistAccess();
+ }catch(e){if(attempt!==connectionAttempt)return;imageEl('analysis-connection').textContent='Análisis sin activar';imageEl('analysis-status').textContent=e.name==='TimeoutError'?'Render tardó demasiado en responder. Espera a que arranque y vuelve a comprobar.':e.message||'No se pudo comprobar el servicio.';}
+ finally{if(attempt===connectionAttempt)updateButton();}
+}
 imageEl('connect-analysis').onclick=checkConnection;
-imageEl('analysis-access').oninput=updateButton;imageEl('image-consent').onchange=updateButton;
-imageEl('analysis-server').oninput=()=>{ready=false;updateButton();imageEl('analysis-connection').textContent='Conexión por comprobar';};
+imageEl('remember-analysis').onchange=persistAccess;
+imageEl('forget-analysis').onclick=()=>{connectionAttempt++;ready=false;imageEl('analysis-access').value='';try{localStorage.removeItem(savedAccessKey);imageEl('access-storage-status').textContent='Acceso olvidado en este navegador. Tus noticias y capturas se conservan.';}catch{imageEl('access-storage-status').textContent='No se pudo eliminar el acceso guardado; revisa los permisos de almacenamiento del navegador.';}imageEl('analysis-connection').textContent='Acceso cerrado';imageEl('analysis-status').textContent='Introduce de nuevo la clave si deseas conectar.';updateButton();};
+imageEl('analysis-access').oninput=()=>{connectionAttempt++;ready=false;imageEl('analysis-connection').textContent='Clave por comprobar';updateButton();};imageEl('image-consent').onchange=updateButton;
+imageEl('analysis-server').oninput=()=>{connectionAttempt++;ready=false;imageEl('analysis-access').value='';updateButton();imageEl('analysis-connection').textContent='Conexión por comprobar';};
 function clearImage(){if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=null;imageFile=null;imageEl('image-file').value='';imageEl('attachment').hidden=true;updateButton();}
 imageEl('remove-image').onclick=clearImage;
 imageEl('image-file').onchange=()=>{const file=imageEl('image-file').files[0];clearImage();if(!file)return;if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>10*1024*1024){imageEl('analysis-status').textContent='Selecciona JPG, PNG o WebP de hasta 10 MB.';return;}imageFile=file;previewUrl=URL.createObjectURL(file);imageEl('preview').src=previewUrl;imageEl('attachment').hidden=false;imageEl('image-status').textContent=file.name;imageEl('analysis-status').textContent='Imagen lista. Añade tu pregunta y autoriza el envío para analizarla.';updateButton();};
