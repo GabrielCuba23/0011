@@ -1,0 +1,6 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {publishedAnaFallback} from '../public/ana-published.js';
+const report={schemaVersion:1,id:'new',origin:'ana-public-export',queryDate:'2026-11-05',rows:[{value:10}]};const status={state:'ok',reportId:'new',lastSuccessAt:'2026-11-05T20:00:00Z',checkedAt:'2026-11-05T20:00:00Z'};
+test('published backup requires a matching verified automated report and never upgrades a manual seed',()=>{assert.equal(publishedAnaFallback(null,{...report,origin:'uploaded-xls'},status),null);assert.equal(publishedAnaFallback(null,report,{...status,lastSuccessAt:null}),null);assert.equal(publishedAnaFallback(null,report,{...status,reportId:'other'}),null);assert.equal(publishedAnaFallback(null,report,status).report,report);});
+test('backup cannot replace a newer report and preserves stale-collection state',()=>{const current={...report,id:'later',queryDate:'2026-11-06'};assert.equal(publishedAnaFallback(current,report,status),null);const stale=publishedAnaFallback(null,report,{...status,state:'error',checkedAt:'2026-11-05T21:00:00Z',errorCode:'ANA_TLS_FAILED'});assert.equal(stale.state,'error');assert.equal(stale.errorCode,'ANA_TLS_FAILED');assert.equal(stale.lastSuccessAt,status.lastSuccessAt);});

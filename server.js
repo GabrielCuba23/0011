@@ -8,7 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash,timingSafeEqual} from 'node:crypto';
 import {AnalysisError,analyzeImage,enrichLocations,diagnoseProvider,probeGeneration} from './lib/analyze.js';
 const root=fileURLToPath(new URL('./public/',import.meta.url));
-const files={'/ana-rivers.js':'ana-rivers.js','/ana-river-parser.js':'ana-river-parser.js','/vendor/xlsx.mjs':'vendor/xlsx.mjs','/data/ana-rivers-snapshot.json':'../data/ana-rivers-snapshot.json','/':'index.html','/app.js':'app.js','/style.css':'style.css','/report.js':'report.js','/dashboard.js':'dashboard.js','/image-analysis.js':'image-analysis.js','/desk.js':'desk.js','/vendor/leaflet.js':'vendor/leaflet.js','/vendor/leaflet.css':'vendor/leaflet.css','/vendor/images/layers.png':'vendor/images/layers.png','/vendor/images/layers-2x.png':'vendor/images/layers-2x.png','/data/dashboard.json':'../data/dashboard.json','/data/media-directory.json':'../data/media-directory.json','/data/media-directory-review.csv':'../data/media-directory-review.csv','/media.js':'media.js','/documents.js':'documents.js'};
+const files={'/ana-published.js':'ana-published.js','/data/ana-rivers-status.json':'../data/ana-rivers-status.json','/ana-rivers.js':'ana-rivers.js','/ana-river-parser.js':'ana-river-parser.js','/vendor/xlsx.mjs':'vendor/xlsx.mjs','/data/ana-rivers-snapshot.json':'../data/ana-rivers-snapshot.json','/':'index.html','/app.js':'app.js','/style.css':'style.css','/report.js':'report.js','/dashboard.js':'dashboard.js','/image-analysis.js':'image-analysis.js','/desk.js':'desk.js','/vendor/leaflet.js':'vendor/leaflet.js','/vendor/leaflet.css':'vendor/leaflet.css','/vendor/images/layers.png':'vendor/images/layers.png','/vendor/images/layers-2x.png':'vendor/images/layers-2x.png','/data/dashboard.json':'../data/dashboard.json','/data/media-directory.json':'../data/media-directory.json','/data/media-directory-review.csv':'../data/media-directory-review.csv','/media.js':'media.js','/documents.js':'documents.js'};
 const types={mjs:'application/javascript',html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8',json:'application/json; charset=utf-8',csv:'text/csv; charset=utf-8',png:'image/png'};
 const MAX_BODY=14*1024*1024;
 function body(req){return new Promise((resolve,reject)=>{let size=0,chunks=[],failed=false;req.on('data',chunk=>{size+=chunk.length;if(size>MAX_BODY){if(!failed){failed=true;chunks=[];reject(new AnalysisError('La imagen supera el tamaño permitido.',413));}}else if(!failed)chunks.push(chunk);});req.on('end',()=>{if(failed)return;try{resolve(JSON.parse(Buffer.concat(chunks).toString()));}catch{reject(new AnalysisError('Solicitud JSON inválida.'));}});req.on('error',()=>reject(new AnalysisError('Carga interrumpida.')));});}
@@ -24,12 +24,12 @@ http.createServer(async(req,res)=>{
  if(origin){if(!same&&!allowed.includes(origin))return json(403,{error:'Este sitio no está autorizado para consultar el servidor.'});res.setHeader('Access-Control-Allow-Origin',origin);res.setHeader('Vary','Origin');}
  if(req.method==='OPTIONS'){res.writeHead(204,{'Access-Control-Allow-Methods':'GET, POST, OPTIONS','Access-Control-Allow-Headers':'Content-Type, Authorization','Access-Control-Max-Age':'600'});return res.end();}
  const path=new URL(req.url,'http://localhost').pathname;
- if(path==='/api/health')return json(200,{status:'ok',version:'0.9.1'});
- if(path==='/api/capabilities')return json(200,{version:'0.9.1',imageAnalysis:Boolean(process.env.GEMINI_API_KEY&&process.env.VIGIA_ACCESS_TOKEN),newsAnalysis:true,authenticationCheck:true,provider:'Gemini',requiresAccessCode:true});
+ if(path==='/api/health')return json(200,{status:'ok',version:'0.9.2'});
+ if(path==='/api/capabilities')return json(200,{version:'0.9.2',imageAnalysis:Boolean(process.env.GEMINI_API_KEY&&process.env.VIGIA_ACCESS_TOKEN),newsAnalysis:true,authenticationCheck:true,provider:'Gemini',requiresAccessCode:true});
  if(path==='/api/auth/check'){
   if(req.method!=='GET')return json(405,{error:'Usa GET.'});
   if(!authorized(req))return json(401,{error:'La clave de acceso del observatorio no es válida.',code:'INVALID_ACCESS_CODE'});
-  return json(200,{authenticated:true,version:'0.9.1'});
+  return json(200,{authenticated:true,version:'0.9.2'});
  }
  if(path==='/api/ana-rivers'){
   if(req.method!=='GET')return json(405,{error:'Usa GET.'});
@@ -83,7 +83,7 @@ http.createServer(async(req,res)=>{
  }
  if(!['GET','HEAD'].includes(req.method))return json(405,{error:'Método no permitido.'});
  if(!files[path]){res.writeHead(404);return res.end('No encontrado');}
- try{const data=await readFile(root+files[path]);res.writeHead(200,{'Content-Type':types[files[path].split('.').pop()],'X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'self'; img-src 'self' blob: data: https://*.tile.openstreetmap.org; style-src 'self'; script-src 'self'; frame-src 'self' blob: https://www.openstreetmap.org; object-src 'none'; base-uri 'none'; frame-ancestors 'none'"});res.end(req.method==='HEAD'?undefined:data);}catch{res.writeHead(500);res.end('Error de lectura');}
+ try{const data=await readFile(root+files[path]);res.writeHead(200,{'Content-Type':types[files[path].split('.').pop()],'X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'self'; connect-src 'self' https://gabrielcuba23.github.io; img-src 'self' blob: data: https://*.tile.openstreetmap.org; style-src 'self'; script-src 'self'; frame-src 'self' blob: https://www.openstreetmap.org; object-src 'none'; base-uri 'none'; frame-ancestors 'none'"});res.end(req.method==='HEAD'?undefined:data);}catch{res.writeHead(500);res.end('Error de lectura');}
 }).listen(Number(process.env.PORT)||3000,'0.0.0.0',()=>console.log('Vigía Perú iniciado en puerto '+(process.env.PORT||3000)));
 
 // Public report collection runs while the Render process is awake. No keepalive requests.

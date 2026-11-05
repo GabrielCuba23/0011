@@ -30,3 +30,6 @@ for(const file of ['media-directory.json','media-directory-review.csv'])await wr
 
 for(const file of ['ana-rivers.js','ana-river-parser.js'])await cp(new URL('public/'+file,root),new URL('dist/'+file,root));
 await cp(new URL('data/ana-rivers-snapshot.json',root),new URL('dist/data/ana-rivers-snapshot.json',root));
+
+await cp(new URL('public/ana-published.js',root),new URL('dist/ana-published.js',root));
+try{await cp(new URL('data/ana-rivers-status.json',root),new URL('dist/data/ana-rivers-status.json',root));}catch(e){if(e.code!=='ENOENT')throw e;}

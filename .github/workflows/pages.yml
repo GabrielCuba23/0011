@@ -30,6 +30,19 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s test -p 'test_*.py'
       - run: python scripts/collect.py
+      - name: Restaurar último reporte automático ANA
+        uses: actions/cache/restore@v4
+        with:
+          path: .ana-cache
+          key: ana-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: ana-reports-
+      - name: Consultar reporte público ANA
+        run: node scripts/collect_ana_rivers.mjs
+      - name: Conservar última descarga ANA y su estado
+        uses: actions/cache/save@v4
+        with:
+          path: .ana-cache
+          key: ana-reports-${{ github.run_id }}-${{ github.run_attempt }}
       - run: node scripts/build.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
