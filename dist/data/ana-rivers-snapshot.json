@@ -1,0 +1,4094 @@
+{
+  "schemaVersion": 1,
+  "id": "acc1c8c0dced29f90892b3dc62b493d26674cf18a6edd397d19c08400b211b86",
+  "origin": "uploaded-xls",
+  "live": false,
+  "sourceUrl": null,
+  "portalUrl": "https://snirh.ana.gob.pe/onrh/Reportes.aspx?R=PRIOS",
+  "sourceFilename": "2026_11_05_13_05_02_276.xls",
+  "fileHash": "acc1c8c0dced29f90892b3dc62b493d26674cf18a6edd397d19c08400b211b86",
+  "importedAt": "2026-11-05T18:16:09.414Z",
+  "reportNumber": "652-2026-ANA",
+  "reportTitle": "REPORTE N° 652-2026-ANA Comportamiento hidrológico de los principales ríos del país.",
+  "queryDate": "2026-11-05",
+  "printedAt": "2026-11-05T13:05:00-05:00",
+  "printedAtPrecision": "minute",
+  "rawDateHeader": "Fecha en consulta: 05/11/2026, Fecha impresión: 05/11/2026 01:05 p. m.",
+  "sourceNote": "(*) Último dato instantáneo registrado en la base de datos del SNIRH. Nota: Datos primarios sin control de calidad, sujeto a revisión y validación por el operador. Su uso es de responsabilidad del usuario",
+  "notes": [
+    "La fecha de impresión es la generación de esta copia, no una actualización confirmada del portal.",
+    "El archivo solo indica la hora de cada registro, no su fecha individual. No se inventa un timestamp de observación.",
+    "Los colores se conservan del archivo; no se recalculan ni equivalen al semáforo editorial.",
+    "No sumar ni comparar globalmente valores expresados en unidades diferentes."
+  ],
+  "counts": {
+    "rawRows": 137,
+    "records": 135,
+    "stations": 135,
+    "duplicatesRemoved": 2,
+    "departments": 23,
+    "orange": 2,
+    "red": 0,
+    "thresholdOrderReview": 6
+  },
+  "rows": [
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Iquitos",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Napo",
+      "station": "Bellavista",
+      "operator": "ANA",
+      "orangeThreshold": 86.92,
+      "redThreshold": 85.81,
+      "orangeRaw": "86.92",
+      "redRaw": "85.81",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 86.43,
+      "valueRaw": "86.43",
+      "unit": "m.s.n.m",
+      "trend": "Ascendente",
+      "sourceHighlight": "naranja",
+      "sourceColor": "FFA500",
+      "thresholdOrderReview": true,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 12
+        },
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 18
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Iquitos",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Nanay",
+      "station": "Santa María de Nanay",
+      "operator": "SENAMHI",
+      "orangeThreshold": 123.09,
+      "redThreshold": 122.06,
+      "orangeRaw": "123.09",
+      "redRaw": "122.06",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 122.9,
+      "valueRaw": "122.90",
+      "unit": "m.s.n.m",
+      "trend": "Estable",
+      "sourceHighlight": "naranja",
+      "sourceColor": "FFA500",
+      "thresholdOrderReview": true,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 13
+        },
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 22
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Iquitos",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Tigre",
+      "station": "Intuto",
+      "operator": "ANA",
+      "orangeThreshold": 20,
+      "redThreshold": 25,
+      "orangeRaw": "20.00",
+      "redRaw": "25.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 7.53,
+      "valueRaw": "7.53",
+      "unit": "m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 19
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Iquitos",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Marañón",
+      "station": "San Regis",
+      "operator": "SENAMHI",
+      "orangeThreshold": 117.02,
+      "redThreshold": 115.91,
+      "orangeRaw": "117.02",
+      "redRaw": "115.91",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 118.65,
+      "valueRaw": "118.65",
+      "unit": "m.s.n.m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": true,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 20
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Iquitos",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Marañón",
+      "station": "Nauta",
+      "operator": "SENAMHI",
+      "orangeThreshold": 123.25,
+      "redThreshold": 123.99,
+      "orangeRaw": "123.25",
+      "redRaw": "123.99",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 117.51,
+      "valueRaw": "117.51",
+      "unit": "m.s.n.m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 21
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Iquitos",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Itaya",
+      "station": "Enapu Perú",
+      "operator": "SENAMHI",
+      "orangeThreshold": 116.5,
+      "redThreshold": 117,
+      "orangeRaw": "116.50",
+      "redRaw": "117.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 109.99,
+      "valueRaw": "109.99",
+      "unit": "m.s.n.m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 23
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Iquitos",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Amazonas",
+      "station": "TAMSHIYACU",
+      "operator": "SENAMHI",
+      "orangeThreshold": 110.94,
+      "redThreshold": 110.05,
+      "orangeRaw": "110.94",
+      "redRaw": "110.05",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 111.92,
+      "valueRaw": "111.92",
+      "unit": "m.s.n.m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": true,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 24
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Iquitos",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Amazonas",
+      "station": "PUERTO ALEGRIA",
+      "operator": "SENAMHI",
+      "orangeThreshold": 70,
+      "redThreshold": 72,
+      "orangeRaw": "70.00",
+      "redRaw": "72.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 60.64,
+      "valueRaw": "60.64",
+      "unit": "m.s.n.m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 25
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Amazonas",
+      "ala": "Alto Amazonas",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Marañón",
+      "station": "Borja",
+      "operator": "SENAMHI",
+      "orangeThreshold": 163.89,
+      "redThreshold": 163.28,
+      "orangeRaw": "163.89",
+      "redRaw": "163.28",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 164.32,
+      "valueRaw": "164.32",
+      "unit": "m.s.n.m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": true,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 26
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Chinchipe Chamaya",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Huancabamba",
+      "station": "Sauzal",
+      "operator": "SENAMHI",
+      "orangeThreshold": 3.7,
+      "redThreshold": 4,
+      "orangeRaw": "3.70",
+      "redRaw": "4.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 2.64,
+      "valueRaw": "2.64",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 27
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Chinchipe Chamaya",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Marañón",
+      "station": "Corral Quemado",
+      "operator": "SENAMHI",
+      "orangeThreshold": 12,
+      "redThreshold": 12.8,
+      "orangeRaw": "12.00",
+      "redRaw": "12.80",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 8.71,
+      "valueRaw": "8.71",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 28
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Chinchipe Chamaya",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Chunchuca",
+      "station": "Cacao",
+      "operator": "SENAMHI",
+      "orangeThreshold": 2.58,
+      "redThreshold": 3.11,
+      "orangeRaw": "2.58",
+      "redRaw": "3.11",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 0.64,
+      "valueRaw": "0.64",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 29
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Chinchipe Chamaya",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Chinchipe",
+      "station": "Huallape",
+      "operator": "SENAMHI",
+      "orangeThreshold": 7.7,
+      "redThreshold": 8.6,
+      "orangeRaw": "7.70",
+      "redRaw": "8.60",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 5.58,
+      "valueRaw": "5.58",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 30
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Chotano Llaucano",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Chotano",
+      "station": "Chotano Lajas",
+      "operator": "SENAMHI",
+      "orangeThreshold": 3.1,
+      "redThreshold": 4,
+      "orangeRaw": "3.10",
+      "redRaw": "4.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 1.24,
+      "valueRaw": "1.24",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 31
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Chotano Llaucano",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Llaucano",
+      "station": "Llaucano Corellama",
+      "operator": "SENAMHI",
+      "orangeThreshold": 82.11,
+      "redThreshold": 108,
+      "orangeRaw": "82.11",
+      "redRaw": "108.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 5.12,
+      "valueRaw": "5.12",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 32
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Chotano Llaucano",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Chotano",
+      "station": "Túnel Chotano",
+      "operator": "SENAMHI",
+      "orangeThreshold": 24.1,
+      "redThreshold": 28.59,
+      "orangeRaw": "24.10",
+      "redRaw": "28.59",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 4.71,
+      "valueRaw": "4.71",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 33
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Utcubamba",
+      "department": "Amazonas",
+      "departmentRaw": "Amazonas",
+      "river": "Utcubamba",
+      "station": "Los Naranjos",
+      "operator": "SENAMHI",
+      "orangeThreshold": 3.91,
+      "redThreshold": 4.5,
+      "orangeRaw": "3.91",
+      "redRaw": "4.50",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 1.32,
+      "valueRaw": "1.32",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 34
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Las Yangas Suite",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Marañón",
+      "station": "Balsas",
+      "operator": "SENAMHI",
+      "orangeThreshold": 1400,
+      "redThreshold": 1700,
+      "orangeRaw": "1400.00",
+      "redRaw": "1700.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 185.51,
+      "valueRaw": "185.51",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 35
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Cajamarca",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Cajamarca",
+      "station": "Jesús Túnel",
+      "operator": "SENAMHI",
+      "orangeThreshold": 48.8,
+      "redThreshold": 65,
+      "orangeRaw": "48.80",
+      "redRaw": "65.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 2.3,
+      "valueRaw": "2.30",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 36
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Cajamarca",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Mashcon",
+      "station": "Mashcón",
+      "operator": "SENAMHI",
+      "orangeThreshold": 14,
+      "redThreshold": 18,
+      "orangeRaw": "14.00",
+      "redRaw": "18.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.42,
+      "valueRaw": "0.42",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 37
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Cajamarca",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Namora",
+      "station": "Namora Bocatoma",
+      "operator": "SENAMHI",
+      "orangeThreshold": 32,
+      "redThreshold": 45,
+      "orangeRaw": "32.00",
+      "redRaw": "45.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 2.79,
+      "valueRaw": "2.79",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 38
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Marañon",
+      "ala": "Crisnejas",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Crisnejas",
+      "station": "Puente Crisnejas",
+      "operator": "SENAMHI",
+      "orangeThreshold": 210,
+      "redThreshold": 290,
+      "orangeRaw": "210.00",
+      "redRaw": "290.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 7.51,
+      "valueRaw": "7.51",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 39
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Mantaro",
+      "ala": "Mantaro",
+      "department": "Junín",
+      "departmentRaw": "Junin",
+      "river": "Cunas",
+      "station": "Cunas",
+      "operator": "ANA",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.36,
+      "valueRaw": "1.36",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 40
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Mantaro",
+      "ala": "Mantaro",
+      "department": "Junín",
+      "departmentRaw": "Junin",
+      "river": "Shullcas",
+      "station": "Shullcas",
+      "operator": "ANA",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.63,
+      "valueRaw": "1.63",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 41
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Mantaro",
+      "ala": "Mantaro",
+      "department": "Junín",
+      "departmentRaw": "Junin",
+      "river": "Santa Ana",
+      "station": "Santa Ana",
+      "operator": "ANA",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.11,
+      "valueRaw": "0.11",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 42
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Mantaro",
+      "ala": "Mantaro",
+      "department": "Junín",
+      "departmentRaw": "Junin",
+      "river": "Yauli",
+      "station": "Yauli",
+      "operator": "ANA",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.61,
+      "valueRaw": "0.61",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 43
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Pampas Apurimac",
+      "ala": "Medio Apurimac Pachachaca",
+      "department": "Cusco",
+      "departmentRaw": "Cusco",
+      "river": "Apurimac",
+      "station": "Puente Cunyac",
+      "operator": "SENAMHI",
+      "orangeThreshold": 1557.6,
+      "redThreshold": 2064.7,
+      "orangeRaw": "1557.60",
+      "redRaw": "2064.70",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 56.08,
+      "valueRaw": "56.08",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 44
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Pampas Apurimac",
+      "ala": "Medio Apurimac Pachachaca",
+      "department": "Apurímac",
+      "departmentRaw": "Apurimac",
+      "river": "Pachachaca",
+      "station": "Santa Rosa Chapimarca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 4,
+      "redThreshold": 4.5,
+      "orangeRaw": "4.00",
+      "redRaw": "4.50",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.97,
+      "valueRaw": "1.97",
+      "unit": "m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 45
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Urubamba Vilcanota",
+      "ala": "La Convencion",
+      "department": "Cusco",
+      "departmentRaw": "Cusco",
+      "river": "Vilcanota",
+      "station": "Egemsa Km 105",
+      "operator": "EGEMSA",
+      "orangeThreshold": 500,
+      "redThreshold": 580,
+      "orangeRaw": "500.00",
+      "redRaw": "580.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 35.28,
+      "valueRaw": "35.28",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 46
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Urubamba Vilcanota",
+      "ala": "La Convencion",
+      "department": "Cusco",
+      "departmentRaw": "Cusco",
+      "river": "Vilcanota",
+      "station": "Intihuatana Km105",
+      "operator": "SENAMHI",
+      "orangeThreshold": 517.33,
+      "redThreshold": 802.75,
+      "orangeRaw": "517.33",
+      "redRaw": "802.75",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 33.35,
+      "valueRaw": "33.35",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 47
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Urubamba Vilcanota",
+      "ala": "Cusco",
+      "department": "Cusco",
+      "departmentRaw": "Cusco",
+      "river": "Vilcanota",
+      "station": "Pisac",
+      "operator": "SENAMHI",
+      "orangeThreshold": 320,
+      "redThreshold": 400,
+      "orangeRaw": "320.00",
+      "redRaw": "400.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 25.43,
+      "valueRaw": "25.43",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 48
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Urubamba Vilcanota",
+      "ala": "Cusco",
+      "department": "Cusco",
+      "departmentRaw": "Cusco",
+      "river": "Mapacho",
+      "station": "Paucartambo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 110,
+      "redThreshold": 160,
+      "orangeRaw": "110.00",
+      "redRaw": "160.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 11.81,
+      "valueRaw": "11.81",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 49
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Urubamba Vilcanota",
+      "ala": "Cusco",
+      "department": "Cusco",
+      "departmentRaw": "Cusco",
+      "river": "Vilcanota",
+      "station": "Chilca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 5.5,
+      "redThreshold": 6.5,
+      "orangeRaw": "5.50",
+      "redRaw": "6.50",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 2.65,
+      "valueRaw": "2.65",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 50
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Urubamba Vilcanota",
+      "ala": "Sicuani",
+      "department": "Cusco",
+      "departmentRaw": "Cusco",
+      "river": "Salcca",
+      "station": "Salcca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 1.74,
+      "redThreshold": 2.31,
+      "orangeRaw": "1.74",
+      "redRaw": "2.31",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.45,
+      "valueRaw": "0.45",
+      "unit": "m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 51
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Tarapoto",
+      "department": "San Martín",
+      "departmentRaw": "San Martin",
+      "river": "Cumbaza",
+      "station": "Cumbaza",
+      "operator": "SENAMHI",
+      "orangeThreshold": 357.14,
+      "redThreshold": 471.47,
+      "orangeRaw": "357.14",
+      "redRaw": "471.47",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.54,
+      "valueRaw": "0.54",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 52
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Tarapoto",
+      "department": "San Martín",
+      "departmentRaw": "San Martin",
+      "river": "Mayo",
+      "station": "Shanao",
+      "operator": "SENAMHI",
+      "orangeThreshold": 1954.41,
+      "redThreshold": 3481.47,
+      "orangeRaw": "1954.41",
+      "redRaw": "3481.47",
+      "recordTime": "13:00",
+      "observedDate": null,
+      "value": 291.02,
+      "valueRaw": "291.02",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 53
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Tarapoto",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Huallaga",
+      "station": "Yurimaguas DHN",
+      "operator": "SENAMHI",
+      "orangeThreshold": 133.3,
+      "redThreshold": 134.2,
+      "orangeRaw": "133.30",
+      "redRaw": "134.20",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 131.2,
+      "valueRaw": "131.20",
+      "unit": "m.s.n.m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 54
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Tarapoto",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Huallaga",
+      "station": "Lagunas",
+      "operator": "SENAMHI",
+      "orangeThreshold": 111.95,
+      "redThreshold": 111.21,
+      "orangeRaw": "111.95",
+      "redRaw": "111.21",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 114.12,
+      "valueRaw": "114.12",
+      "unit": "m.s.n.m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": true,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 55
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Huallaga Central",
+      "department": "San Martín",
+      "departmentRaw": "San Martin",
+      "river": "Huayabamba",
+      "station": "Huayabamba",
+      "operator": "SENAMHI",
+      "orangeThreshold": 3329.6,
+      "redThreshold": 4019.8,
+      "orangeRaw": "3329.60",
+      "redRaw": "4019.80",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 676.82,
+      "valueRaw": "676.82",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 56
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Huallaga Central",
+      "department": "San Martín",
+      "departmentRaw": "San Martin",
+      "river": "Huallaga",
+      "station": "Picota",
+      "operator": "SENAMHI",
+      "orangeThreshold": 8130.38,
+      "redThreshold": 9883.48,
+      "orangeRaw": "8130.38",
+      "redRaw": "9883.48",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 2192.42,
+      "valueRaw": "2192.42",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 57
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Huallaga Central",
+      "department": "San Martín",
+      "departmentRaw": "San Martin",
+      "river": "Huallaga",
+      "station": "Puente Tocache",
+      "operator": "SENAMHI",
+      "orangeThreshold": 2587,
+      "redThreshold": 3259,
+      "orangeRaw": "2587.00",
+      "redRaw": "3259.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 970.26,
+      "valueRaw": "970.26",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 58
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Huallaga Central",
+      "department": "San Martín",
+      "departmentRaw": "San Martin",
+      "river": "Sisa",
+      "station": "Bocatoma San Pablo (Irrigación Sisa)",
+      "operator": "JU HUALLAGA CENTRAL",
+      "orangeThreshold": 250,
+      "redThreshold": 500,
+      "orangeRaw": "250.00",
+      "redRaw": "500.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 9,
+      "valueRaw": "9.00",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 59
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Tingo Maria",
+      "department": "Huánuco",
+      "departmentRaw": "Huanuco",
+      "river": "Huallaga",
+      "station": "Tingo María",
+      "operator": "SENAMHI",
+      "orangeThreshold": 1010,
+      "redThreshold": 1178,
+      "orangeRaw": "1010.00",
+      "redRaw": "1178.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 222.67,
+      "valueRaw": "222.67",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 60
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Tingo Maria",
+      "department": "Huánuco",
+      "departmentRaw": "Huanuco",
+      "river": "Monzón",
+      "station": "Pte. Bella",
+      "operator": "SENAMHI",
+      "orangeThreshold": 610.6,
+      "redThreshold": 759.2,
+      "orangeRaw": "610.60",
+      "redRaw": "759.20",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 142.3,
+      "valueRaw": "142.30",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 61
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Tingo Maria",
+      "department": "Huánuco",
+      "departmentRaw": "Huanuco",
+      "river": "Huallaga",
+      "station": "Puente Pérez",
+      "operator": "SENAMHI",
+      "orangeThreshold": 846,
+      "redThreshold": 1086,
+      "orangeRaw": "846.00",
+      "redRaw": "1086.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 82.21,
+      "valueRaw": "82.21",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 62
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Alto Huallaga",
+      "department": "Huánuco",
+      "departmentRaw": "Huanuco",
+      "river": "Huallaga",
+      "station": "Taruca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 270,
+      "redThreshold": 305,
+      "orangeRaw": "270.00",
+      "redRaw": "305.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 21.43,
+      "valueRaw": "21.43",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 63
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Alto Huallaga",
+      "department": "Huánuco",
+      "departmentRaw": "Huanuco",
+      "river": "Higueras",
+      "station": "Puente Higueras",
+      "operator": "SENAMHI",
+      "orangeThreshold": 36,
+      "redThreshold": 48,
+      "orangeRaw": "36.00",
+      "redRaw": "48.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 3.25,
+      "valueRaw": "3.25",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 64
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Huallaga",
+      "ala": "Alto Huallaga",
+      "department": "Huánuco",
+      "departmentRaw": "Huanuco",
+      "river": "Huallaga",
+      "station": "San Rafael",
+      "operator": "SENAMHI",
+      "orangeThreshold": 1.7,
+      "redThreshold": 2.2,
+      "orangeRaw": "1.70",
+      "redRaw": "2.20",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.06,
+      "valueRaw": "0.06",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 65
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Ucayali",
+      "ala": "Pucallpa",
+      "department": "Ucayali",
+      "departmentRaw": "Ucayali",
+      "river": "Ucayali",
+      "station": "LPO PUCALLPA",
+      "operator": "SENAMHI",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "08:00",
+      "observedDate": null,
+      "value": 143.73,
+      "valueRaw": "143.73",
+      "unit": "m.s.n.m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 66
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Ucayali",
+      "ala": "Pucallpa",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Ucayali",
+      "station": "Requena",
+      "operator": "SENAMHI",
+      "orangeThreshold": 128.7,
+      "redThreshold": 129.22,
+      "orangeRaw": "128.70",
+      "redRaw": "129.22",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 123.69,
+      "valueRaw": "123.69",
+      "unit": "m.s.n.m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 67
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Ucayali",
+      "ala": "Pucallpa",
+      "department": "Loreto",
+      "departmentRaw": "Loreto",
+      "river": "Ucayali",
+      "station": "Contamana",
+      "operator": "SENAMHI",
+      "orangeThreshold": 131.78,
+      "redThreshold": 132.62,
+      "orangeRaw": "131.78",
+      "redRaw": "132.62",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 129.43,
+      "valueRaw": "129.43",
+      "unit": "m.s.n.m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 68
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Ucayali",
+      "ala": "Pucallpa",
+      "department": "Ucayali",
+      "departmentRaw": "Ucayali",
+      "river": "Ucayali",
+      "station": "Pucallpa",
+      "operator": "DTAGRU",
+      "orangeThreshold": 146,
+      "redThreshold": 147,
+      "orangeRaw": "146.00",
+      "redRaw": "147.00",
+      "recordTime": "07:00",
+      "observedDate": null,
+      "value": 143.53,
+      "valueRaw": "143.53",
+      "unit": "m.s.n.m.",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 69
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Ucayali",
+      "ala": "Pucallpa",
+      "department": "Huánuco",
+      "departmentRaw": "Huanuco",
+      "river": "Pachitea",
+      "station": "Puerto Inca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 4708,
+      "redThreshold": 5109,
+      "orangeRaw": "4708.00",
+      "redRaw": "5109.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 2034.37,
+      "valueRaw": "2034.37",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 70
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Ucayali",
+      "ala": "Perene",
+      "department": "Junín",
+      "departmentRaw": "Junin",
+      "river": "Perené",
+      "station": "Puente Chirani",
+      "operator": "SENAMHI",
+      "orangeThreshold": 1000,
+      "redThreshold": 1500,
+      "orangeRaw": "1000.00",
+      "redRaw": "1500.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 168.19,
+      "valueRaw": "168.19",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 71
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Ucayali",
+      "ala": "Perene",
+      "department": "Junín",
+      "departmentRaw": "Junin",
+      "river": "Tulumayo",
+      "station": "Rio Tulumayo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 250,
+      "redThreshold": 310,
+      "orangeRaw": "250.00",
+      "redRaw": "310.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 38.92,
+      "valueRaw": "38.92",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 72
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Madre de Dios",
+      "ala": "Tahuamanu Madre de Dios",
+      "department": "Madre de Dios",
+      "departmentRaw": "Madre De Dios",
+      "river": "Madre De Dios",
+      "station": "Amaru Mayu",
+      "operator": "JIRAU",
+      "orangeThreshold": 17000,
+      "redThreshold": 21000,
+      "orangeRaw": "17000.00",
+      "redRaw": "21000.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 3464.19,
+      "valueRaw": "3464.19",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 73
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Amazonas",
+      "aaa": "Madre de Dios",
+      "ala": "Tambopata Inambari",
+      "department": "Madre de Dios",
+      "departmentRaw": "Madre De Dios",
+      "river": "Inambari",
+      "station": "Puente Inambari",
+      "operator": "SENAMHI",
+      "orangeThreshold": 6839,
+      "redThreshold": 10343,
+      "orangeRaw": "6839.00",
+      "redRaw": "10343.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 2923.93,
+      "valueRaw": "2923.93",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 74
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Tumbes",
+      "department": "Tumbes",
+      "departmentRaw": "Tumbes",
+      "river": "Zarumilla",
+      "station": "Palmales",
+      "operator": "PEBPT",
+      "orangeThreshold": 600,
+      "redThreshold": 800,
+      "orangeRaw": "600.00",
+      "redRaw": "800.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 52.5,
+      "valueRaw": "52.50",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 75
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Tumbes",
+      "department": "Tumbes",
+      "departmentRaw": "Tumbes",
+      "river": "Tumbes",
+      "station": "El Tigre",
+      "operator": "SENAMHI",
+      "orangeThreshold": 700,
+      "redThreshold": 1000,
+      "orangeRaw": "700.00",
+      "redRaw": "1000.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 234.35,
+      "valueRaw": "234.35",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 76
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Tumbes",
+      "department": "Tumbes",
+      "departmentRaw": "Tumbes",
+      "river": "Tumbes",
+      "station": "Cabo Inga",
+      "operator": "SENAMHI",
+      "orangeThreshold": 700,
+      "redThreshold": 1000,
+      "orangeRaw": "700.00",
+      "redRaw": "1000.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 186.44,
+      "valueRaw": "186.44",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 77
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Chira",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Alamor",
+      "station": "Alamor",
+      "operator": "SENAMHI",
+      "orangeThreshold": 310,
+      "redThreshold": 423,
+      "orangeRaw": "310.00",
+      "redRaw": "423.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 21.35,
+      "valueRaw": "21.35",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 78
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "San Lorenzo",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Chipillico",
+      "station": "Lagartera",
+      "operator": "SENAMHI",
+      "orangeThreshold": 280,
+      "redThreshold": 430,
+      "orangeRaw": "280.00",
+      "redRaw": "430.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 3.55,
+      "valueRaw": "3.55",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 79
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "San Lorenzo",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Quiroz",
+      "station": "Río Quiroz",
+      "operator": "JUSL",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 17,
+      "valueRaw": "17.00",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 80
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "San Lorenzo",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Macará",
+      "station": "Pte. Int. Macara",
+      "operator": "SENAMHI",
+      "orangeThreshold": 500,
+      "redThreshold": 580,
+      "orangeRaw": "500.00",
+      "redRaw": "580.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 31.7,
+      "valueRaw": "31.70",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 81
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "San Lorenzo",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Chira",
+      "station": "El Ciruelo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 800,
+      "redThreshold": 1000,
+      "orangeRaw": "800.00",
+      "redRaw": "1000.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 42.98,
+      "valueRaw": "42.98",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 82
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Alto Piura",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Bigote.",
+      "station": "Hacienda Barrios",
+      "operator": "SENAMHI",
+      "orangeThreshold": 300,
+      "redThreshold": 350,
+      "orangeRaw": "300.00",
+      "redRaw": "350.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 6.86,
+      "valueRaw": "6.86",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 83
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Alto Piura",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Charanal",
+      "station": "San Pedro",
+      "operator": "SENAMHI",
+      "orangeThreshold": 150,
+      "redThreshold": 200,
+      "orangeRaw": "150.00",
+      "redRaw": "200.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 3.52,
+      "valueRaw": "3.52",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 84
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Alto Piura",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Piura",
+      "station": "Puente Ñacara",
+      "operator": "SENAMHI",
+      "orangeThreshold": 830,
+      "redThreshold": 1100,
+      "orangeRaw": "830.00",
+      "redRaw": "1100.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 23.24,
+      "valueRaw": "23.24",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 85
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Medio Y Bajo Piura",
+      "department": "Piura",
+      "departmentRaw": "Piura",
+      "river": "Piura",
+      "station": "Puente Sanchez Cerro",
+      "operator": "PECHP",
+      "orangeThreshold": 1290,
+      "redThreshold": 1900,
+      "orangeRaw": "1290.00",
+      "redRaw": "1900.00",
+      "recordTime": "07:00",
+      "observedDate": null,
+      "value": 92,
+      "valueRaw": "92.00",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 86
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Motupe Olmos La Leche",
+      "department": "Lambayeque",
+      "departmentRaw": "Lambayeque",
+      "river": "La Leche",
+      "station": "Puchaca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 3.3,
+      "redThreshold": 3.7,
+      "orangeRaw": "3.30",
+      "redRaw": "3.70",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 2.6,
+      "valueRaw": "2.60",
+      "unit": "m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 87
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Chancay Lambayeque",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Cañad",
+      "station": "Cañad",
+      "operator": "SENAMHI",
+      "orangeThreshold": 78.58,
+      "redThreshold": 122.99,
+      "orangeRaw": "78.58",
+      "redRaw": "122.99",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 8.77,
+      "valueRaw": "8.77",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 88
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Chancay Lambayeque",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Chancay Lambayeque",
+      "station": "Racarumi",
+      "operator": "PEOT",
+      "orangeThreshold": 400,
+      "redThreshold": 500,
+      "orangeRaw": "400.00",
+      "redRaw": "500.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 50.59,
+      "valueRaw": "50.59",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 89
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Chancay Lambayeque",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Chancay Lambayeque",
+      "station": "Cirato",
+      "operator": "SENAMHI",
+      "orangeThreshold": 250,
+      "redThreshold": 285,
+      "orangeRaw": "250.00",
+      "redRaw": "285.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 44.22,
+      "valueRaw": "44.22",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 90
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Zaña",
+      "department": "Lambayeque",
+      "departmentRaw": "Lambayeque",
+      "river": "Zaña",
+      "station": "Batan",
+      "operator": "JU ZAÑA",
+      "orangeThreshold": 100,
+      "redThreshold": 200,
+      "orangeRaw": "100.00",
+      "redRaw": "200.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 15.2,
+      "valueRaw": "15.20",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 91
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Jequetepeque Zarumilla",
+      "ala": "Jequetepeque",
+      "department": "Cajamarca",
+      "departmentRaw": "Cajamarca",
+      "river": "Jequetepeque",
+      "station": "Yónan Gore",
+      "operator": "SENAMHI",
+      "orangeThreshold": 200,
+      "redThreshold": 300,
+      "orangeRaw": "200.00",
+      "redRaw": "300.00",
+      "recordTime": "13:00",
+      "observedDate": null,
+      "value": 6.4,
+      "valueRaw": "6.40",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 92
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Huarmey Chicama",
+      "ala": "Chicama",
+      "department": "La Libertad",
+      "departmentRaw": "La Libertad",
+      "river": "Chicama",
+      "station": "El Tambo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 180,
+      "redThreshold": 250,
+      "orangeRaw": "180.00",
+      "redRaw": "250.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 8.12,
+      "valueRaw": "8.12",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 93
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Huarmey Chicama",
+      "ala": "Chicama",
+      "department": "La Libertad",
+      "departmentRaw": "La Libertad",
+      "river": "Ochape",
+      "station": "Puente Palmira",
+      "operator": "SENAMHI",
+      "orangeThreshold": 30,
+      "redThreshold": 40,
+      "orangeRaw": "30.00",
+      "redRaw": "40.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.14,
+      "valueRaw": "0.14",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 94
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Huarmey Chicama",
+      "ala": "Chicama",
+      "department": "La Libertad",
+      "departmentRaw": "La Libertad",
+      "river": "Chicama",
+      "station": "Salinar",
+      "operator": "SENAMHI",
+      "orangeThreshold": 200,
+      "redThreshold": 340,
+      "orangeRaw": "200.00",
+      "redRaw": "340.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 6.17,
+      "valueRaw": "6.17",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 95
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Huarmey Chicama",
+      "ala": "Santa Lacramarca Nepeña",
+      "department": "La Libertad",
+      "departmentRaw": "La Libertad",
+      "river": "Santa",
+      "station": "Condorcerro",
+      "operator": "SENAMHI",
+      "orangeThreshold": 505,
+      "redThreshold": 635,
+      "orangeRaw": "505.00",
+      "redRaw": "635.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 82.45,
+      "valueRaw": "82.45",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 96
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Huarmey Chicama",
+      "ala": "Huaraz",
+      "department": "Áncash",
+      "departmentRaw": "Áncash",
+      "river": "Santa",
+      "station": "San Pedro",
+      "operator": "SENAMHI",
+      "orangeThreshold": 100,
+      "redThreshold": 110,
+      "orangeRaw": "100.00",
+      "redRaw": "110.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 14.17,
+      "valueRaw": "14.17",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 97
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Huaura",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Checras",
+      "station": "Picoy",
+      "operator": "SENAMHI",
+      "orangeThreshold": 17.3,
+      "redThreshold": 23,
+      "orangeRaw": "17.30",
+      "redRaw": "23.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 3.49,
+      "valueRaw": "3.49",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 98
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Huaura",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Huaura",
+      "station": "Sayán",
+      "operator": "SENAMHI",
+      "orangeThreshold": 64,
+      "redThreshold": 75,
+      "orangeRaw": "64.00",
+      "redRaw": "75.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 7.54,
+      "valueRaw": "7.54",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 99
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Chancay Huaral",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Chancay Huaral",
+      "station": "Santo Domingo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 112,
+      "redThreshold": 140,
+      "orangeRaw": "112.00",
+      "redRaw": "140.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 6.43,
+      "valueRaw": "6.43",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 100
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Chancay Huaral",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Chancay Huaral",
+      "station": "Puente Callantama",
+      "operator": "SENAMHI",
+      "orangeThreshold": 112,
+      "redThreshold": 140,
+      "orangeRaw": "112.00",
+      "redRaw": "140.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 4,
+      "valueRaw": "4.00",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 101
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Chillon Rimac Lurin",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Chillón",
+      "station": "Pariacancha",
+      "operator": "SENAMHI",
+      "orangeThreshold": 10,
+      "redThreshold": 14.3,
+      "orangeRaw": "10.00",
+      "redRaw": "14.30",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.59,
+      "valueRaw": "1.59",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 102
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Chillon Rimac Lurin",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Rímac",
+      "station": "Puente Huachipa",
+      "operator": "SENAMHI",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.2,
+      "valueRaw": "1.20",
+      "unit": "m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 103
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Chillon Rimac Lurin",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Chillón",
+      "station": "Obrajillo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 20.72,
+      "redThreshold": 27.45,
+      "orangeRaw": "20.72",
+      "redRaw": "27.45",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.89,
+      "valueRaw": "1.89",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 104
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Chillon Rimac Lurin",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Rímac",
+      "station": "Chosica",
+      "operator": "SENAMHI",
+      "orangeThreshold": 90,
+      "redThreshold": 120,
+      "orangeRaw": "90.00",
+      "redRaw": "120.00",
+      "recordTime": "13:00",
+      "observedDate": null,
+      "value": 23.72,
+      "valueRaw": "23.72",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 105
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Chillon Rimac Lurin",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Rímac",
+      "station": "San Mateo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 34,
+      "redThreshold": 41,
+      "orangeRaw": "34.00",
+      "redRaw": "41.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 5.24,
+      "valueRaw": "5.24",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 106
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Chillon Rimac Lurin",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Lurín",
+      "station": "Antapucro",
+      "operator": "SENAMHI",
+      "orangeThreshold": 55,
+      "redThreshold": 70,
+      "orangeRaw": "55.00",
+      "redRaw": "70.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.08,
+      "valueRaw": "0.08",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 107
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Mala Omas Cañete",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Mala",
+      "station": "La Capilla",
+      "operator": "SENAMHI",
+      "orangeThreshold": 94,
+      "redThreshold": 114,
+      "orangeRaw": "94.00",
+      "redRaw": "114.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 1.78,
+      "valueRaw": "1.78",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 108
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Cañete Fortaleza",
+      "ala": "Mala Omas Cañete",
+      "department": "Lima",
+      "departmentRaw": "Lima",
+      "river": "Cañete",
+      "station": "Socsi",
+      "operator": "SENAMHI",
+      "orangeThreshold": 175,
+      "redThreshold": 250,
+      "orangeRaw": "175.00",
+      "redRaw": "250.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 10.41,
+      "valueRaw": "10.41",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 109
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Chaparra Chincha",
+      "ala": "Pisco",
+      "department": "Ica",
+      "departmentRaw": "Ica",
+      "river": "Pisco",
+      "station": "Letrayoc",
+      "operator": "SENAMHI",
+      "orangeThreshold": 140,
+      "redThreshold": 250,
+      "orangeRaw": "140.00",
+      "redRaw": "250.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 8.55,
+      "valueRaw": "8.55",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 110
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Chaparra Chincha",
+      "ala": "Ica",
+      "department": "Ica",
+      "departmentRaw": "Ica",
+      "river": "Ica",
+      "station": "La Achirana",
+      "operator": "JU LA ACHIRANA",
+      "orangeThreshold": 70,
+      "redThreshold": 140,
+      "orangeRaw": "70.00",
+      "redRaw": "140.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 10.5,
+      "valueRaw": "10.50",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 111
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Chaparra Chincha",
+      "ala": "Ica",
+      "department": "Ica",
+      "departmentRaw": "Ica",
+      "river": "Ica",
+      "station": "El Tambo Huamani",
+      "operator": "SENAMHI",
+      "orangeThreshold": 150,
+      "redThreshold": 280,
+      "orangeRaw": "150.00",
+      "redRaw": "280.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 13.22,
+      "valueRaw": "13.22",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 112
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Chaparra Chincha",
+      "ala": "Ica",
+      "department": "Huancavelica",
+      "departmentRaw": "Huancavelica",
+      "river": "Río Santiago",
+      "station": "Challaca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 150,
+      "redThreshold": 280,
+      "orangeRaw": "150.00",
+      "redRaw": "280.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 14.48,
+      "valueRaw": "14.48",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 113
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Chaparra Chincha",
+      "ala": "Ica",
+      "department": "Ica",
+      "departmentRaw": "Ica",
+      "river": "Ica",
+      "station": "Los Molinos",
+      "operator": "SENAMHI",
+      "orangeThreshold": 140,
+      "redThreshold": 250,
+      "orangeRaw": "140.00",
+      "redRaw": "250.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 11.82,
+      "valueRaw": "11.82",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 114
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Chaparra Chincha",
+      "ala": "Grande",
+      "department": "Ayacucho",
+      "departmentRaw": "Ayacucho",
+      "river": "Palpa",
+      "station": "Llauta",
+      "operator": "SENAMHI",
+      "orangeThreshold": 55,
+      "redThreshold": 65,
+      "orangeRaw": "55.00",
+      "redRaw": "65.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.22,
+      "valueRaw": "0.22",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 115
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Ocoña Pausa",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Cotahuasi",
+      "station": "Cuyau",
+      "operator": "SENAMHI",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.14,
+      "valueRaw": "0.14",
+      "unit": "m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 116
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Camana Majes",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Majes",
+      "station": "Huatiapa",
+      "operator": "SENAMHI",
+      "orangeThreshold": 320,
+      "redThreshold": 400,
+      "orangeRaw": "320.00",
+      "redRaw": "400.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 21.71,
+      "valueRaw": "21.71",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 117
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Camana Majes",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Camaná",
+      "station": "Hacienda Pampata",
+      "operator": "SENAMHI",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.52,
+      "valueRaw": "0.52",
+      "unit": "m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 118
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Colca Sihuas Chivay",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Llapa",
+      "station": "Sibayo",
+      "operator": "SENAMHI",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.49,
+      "valueRaw": "0.49",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 119
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Chili",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Chili",
+      "station": "Puente el Diablo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 110,
+      "redThreshold": 150,
+      "orangeRaw": "110.00",
+      "redRaw": "150.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 9.39,
+      "valueRaw": "9.39",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 120
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Chili",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Socabaya",
+      "station": "Tingo Grande",
+      "operator": "SENAMHI",
+      "orangeThreshold": 55,
+      "redThreshold": 70,
+      "orangeRaw": "55.00",
+      "redRaw": "70.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.13,
+      "valueRaw": "0.13",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 121
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Chili",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Sumbay",
+      "station": "Sumbay",
+      "operator": "SENAMHI",
+      "orangeThreshold": 60,
+      "redThreshold": 85,
+      "orangeRaw": "60.00",
+      "redRaw": "85.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 6.57,
+      "valueRaw": "6.57",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 122
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Chili",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Vítor",
+      "station": "Boyadero",
+      "operator": "SENAMHI",
+      "orangeThreshold": 3.25,
+      "redThreshold": 3.6,
+      "orangeRaw": "3.25",
+      "redRaw": "3.60",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.23,
+      "valueRaw": "1.23",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 123
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Tambo Alto Tambo",
+      "department": "Arequipa",
+      "departmentRaw": "Arequipa",
+      "river": "Tambo",
+      "station": "La Pascana",
+      "operator": "SENAMHI",
+      "orangeThreshold": 300,
+      "redThreshold": 370,
+      "orangeRaw": "300.00",
+      "redRaw": "370.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 6.29,
+      "valueRaw": "6.29",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 124
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Moquegua",
+      "department": "Moquegua",
+      "departmentRaw": "Moquegua",
+      "river": "Otora",
+      "station": "Otora",
+      "operator": "SENAMHI",
+      "orangeThreshold": 25,
+      "redThreshold": 40,
+      "orangeRaw": "25.00",
+      "redRaw": "40.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 2.2,
+      "valueRaw": "2.20",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 125
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Moquegua",
+      "department": "Moquegua",
+      "departmentRaw": "Moquegua",
+      "river": "Tumilaca",
+      "station": "Tumilaca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 30,
+      "redThreshold": 50,
+      "orangeRaw": "30.00",
+      "redRaw": "50.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 0.5,
+      "valueRaw": "0.50",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 126
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Locumba",
+      "station": "Puente Viejo",
+      "operator": "SENAMHI",
+      "orangeThreshold": 36,
+      "redThreshold": 48,
+      "orangeRaw": "36.00",
+      "redRaw": "48.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 3.01,
+      "valueRaw": "3.01",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 127
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Locumba",
+      "station": "TICAPAMPA",
+      "operator": "SENAMHI",
+      "orangeThreshold": 20,
+      "redThreshold": 40,
+      "orangeRaw": "20.00",
+      "redRaw": "40.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 2.65,
+      "valueRaw": "2.65",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 128
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Callazas",
+      "station": "Coranchay",
+      "operator": "SENAMHI",
+      "orangeThreshold": 12,
+      "redThreshold": 20,
+      "orangeRaw": "12.00",
+      "redRaw": "20.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 2.04,
+      "valueRaw": "2.04",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 129
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Sama",
+      "station": "Puente Talapalca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 20,
+      "redThreshold": 40,
+      "orangeRaw": "20.00",
+      "redRaw": "40.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.75,
+      "valueRaw": "1.75",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 130
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Sama",
+      "station": "La Tranca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 20,
+      "redThreshold": 40,
+      "orangeRaw": "20.00",
+      "redRaw": "40.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 1.05,
+      "valueRaw": "1.05",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 131
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Sama",
+      "station": "Coruca",
+      "operator": "SENAMHI",
+      "orangeThreshold": 30,
+      "redThreshold": 60,
+      "orangeRaw": "30.00",
+      "redRaw": "60.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.8,
+      "valueRaw": "0.80",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 132
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Caplina",
+      "station": "Caplina",
+      "operator": "SENAMHI",
+      "orangeThreshold": 6,
+      "redThreshold": 10,
+      "orangeRaw": "6.00",
+      "redRaw": "10.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.58,
+      "valueRaw": "0.58",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 133
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Caplina",
+      "station": "Challata",
+      "operator": "SENAMHI",
+      "orangeThreshold": 15,
+      "redThreshold": 30,
+      "orangeRaw": "15.00",
+      "redRaw": "30.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.67,
+      "valueRaw": "0.67",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 134
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Quilvire",
+      "station": "Vilacota",
+      "operator": "SENAMHI",
+      "orangeThreshold": 6,
+      "redThreshold": 8,
+      "orangeRaw": "6.00",
+      "redRaw": "8.00",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 0.15,
+      "valueRaw": "0.15",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 135
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Uchusuma",
+      "station": "Cerro Blanco",
+      "operator": "SENAMHI",
+      "orangeThreshold": 2.5,
+      "redThreshold": 3,
+      "orangeRaw": "2.50",
+      "redRaw": "3.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.92,
+      "valueRaw": "0.92",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 136
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Pacífico",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Canopampa",
+      "station": "Túnel Kovire",
+      "operator": "SENAMHI",
+      "orangeThreshold": 3,
+      "redThreshold": 5,
+      "orangeRaw": "3.00",
+      "redRaw": "5.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.34,
+      "valueRaw": "0.34",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 137
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Ramis",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Azángaro",
+      "station": "Pte. Azángaro",
+      "operator": "SENAMHI",
+      "orangeThreshold": 350,
+      "redThreshold": 400,
+      "orangeRaw": "350.00",
+      "redRaw": "400.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 4.85,
+      "valueRaw": "4.85",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 138
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Ramis",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Ayaviri",
+      "station": "Puente Ayaviri",
+      "operator": "SENAMHI",
+      "orangeThreshold": 2.2,
+      "redThreshold": 3,
+      "orangeRaw": "2.20",
+      "redRaw": "3.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.35,
+      "valueRaw": "0.35",
+      "unit": "m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 139
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Ramis",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Ramis",
+      "station": "Puente Ramis",
+      "operator": "SENAMHI",
+      "orangeThreshold": 320,
+      "redThreshold": 465,
+      "orangeRaw": "320.00",
+      "redRaw": "465.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 3.95,
+      "valueRaw": "3.95",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 140
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Huancane",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Huancané",
+      "station": "Puente Huancané",
+      "operator": "SENAMHI",
+      "orangeThreshold": 115,
+      "redThreshold": 145,
+      "orangeRaw": "115.00",
+      "redRaw": "145.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 2.13,
+      "valueRaw": "2.13",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 141
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Huancane",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Suches",
+      "station": "HUANCASAYA",
+      "operator": "SENAMHI",
+      "orangeThreshold": 1.65,
+      "redThreshold": 1.8,
+      "orangeRaw": "1.65",
+      "redRaw": "1.80",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.48,
+      "valueRaw": "0.48",
+      "unit": "m",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 142
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Juliaca",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Cabanillas",
+      "station": "Rio Verde",
+      "operator": "SENAMHI",
+      "orangeThreshold": 30.3,
+      "redThreshold": 34,
+      "orangeRaw": "30.30",
+      "redRaw": "34.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 7.56,
+      "valueRaw": "7.56",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 143
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Juliaca",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Cabanillas",
+      "station": "Puente Isla Cabanillas",
+      "operator": "SENAMHI",
+      "orangeThreshold": 270,
+      "redThreshold": 300,
+      "orangeRaw": "270.00",
+      "redRaw": "300.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 5.5,
+      "valueRaw": "5.50",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 144
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Juliaca",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Coata",
+      "station": "Pte. Coata-Unocolla",
+      "operator": "SENAMHI",
+      "orangeThreshold": 295,
+      "redThreshold": 400,
+      "orangeRaw": "295.00",
+      "redRaw": "400.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 7.59,
+      "valueRaw": "7.59",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 145
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Juliaca",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Lampa",
+      "station": "Lampa",
+      "operator": "SENAMHI",
+      "orangeThreshold": 150,
+      "redThreshold": 175,
+      "orangeRaw": "150.00",
+      "redRaw": "175.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.29,
+      "valueRaw": "0.29",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 146
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Ilave",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Callaccame",
+      "station": "Puente Yohoroco-Callacame",
+      "operator": "SENAMHI",
+      "orangeThreshold": 28.5,
+      "redThreshold": 54.7,
+      "orangeRaw": "28.50",
+      "redRaw": "54.70",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.09,
+      "valueRaw": "0.09",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 147
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Ilave",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Zapatilla",
+      "station": "Puente Zapatilla",
+      "operator": "SENAMHI",
+      "orangeThreshold": 12.5,
+      "redThreshold": 17,
+      "orangeRaw": "12.50",
+      "redRaw": "17.00",
+      "recordTime": "10:00",
+      "observedDate": null,
+      "value": 0.07,
+      "valueRaw": "0.07",
+      "unit": "m³/s",
+      "trend": "Estable",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 148
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Ilave",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Ilave",
+      "station": "Pte. Carretera Ilave",
+      "operator": "SENAMHI",
+      "orangeThreshold": 520,
+      "redThreshold": 620,
+      "orangeRaw": "520.00",
+      "redRaw": "620.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 4.25,
+      "valueRaw": "4.25",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 149
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Titicaca",
+      "ala": "Ilave",
+      "department": "Puno",
+      "departmentRaw": "Puno",
+      "river": "Titicaca",
+      "station": "Muelle Enafer",
+      "operator": "SENAMHI",
+      "orangeThreshold": 3809,
+      "redThreshold": 3810.25,
+      "orangeRaw": "3809.00",
+      "redRaw": "3810.25",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 3808.34,
+      "valueRaw": "3808.34",
+      "unit": "m.s.n.m",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 150
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Ushusuma",
+      "station": "Canal Uchusuma",
+      "operator": "SENAMHI",
+      "orangeThreshold": null,
+      "redThreshold": null,
+      "orangeRaw": "s.d.",
+      "redRaw": "s.d.",
+      "recordTime": "06:00",
+      "observedDate": null,
+      "value": 0.88,
+      "valueRaw": "0.88",
+      "unit": "m³/s",
+      "trend": "Descendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 151
+        }
+      ],
+      "stationHasMultipleRecords": false
+    },
+    {
+      "hydrographicRegion": "Titicaca",
+      "aaa": "Caplina Ocoña",
+      "ala": "Caplina Locumba",
+      "department": "Tacna",
+      "departmentRaw": "Tacna",
+      "river": "Mauri",
+      "station": "Ancoaque",
+      "operator": "SENAMHI",
+      "orangeThreshold": 5,
+      "redThreshold": 7,
+      "orangeRaw": "5.00",
+      "redRaw": "7.00",
+      "recordTime": "12:00",
+      "observedDate": null,
+      "value": 0.12,
+      "valueRaw": "0.12",
+      "unit": "m³/s",
+      "trend": "Ascendente",
+      "sourceHighlight": "sin_resalte",
+      "sourceColor": "FFFFFF",
+      "thresholdOrderReview": false,
+      "sourceRows": [
+        {
+          "sheet": "rptNacionalCaudal",
+          "row": 152
+        }
+      ],
+      "stationHasMultipleRecords": false
+    }
+  ]
+}

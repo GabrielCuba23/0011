@@ -14,6 +14,7 @@ html=html.replace('<link rel="stylesheet" href="/style.css">','<style>'+await re
 .replace('<script type="module" src="/desk.js"></script>','<script type="module">'+await read('public/desk.js')+'</script>')
 .replace('<script type="module" src="/media.js"></script>','<script type="module">'+await read('public/media.js')+'</script>')
 .replace('<script type="module" src="/documents.js"></script>','<script type="module">'+await read('public/documents.js')+'</script>')
+.replace('<script type="module" src="/ana-rivers.js"></script>','<script type="module" src="./ana-rivers.js"></script>')
 .replaceAll('href="/vendor/','href="./vendor/').replaceAll('src="/vendor/','src="./vendor/');
 await mkdir(new URL('dist/',root),{recursive:true});
 await writeFile(new URL('dist/index.html',root),html);
@@ -26,3 +27,6 @@ await writeFile(new URL('dist/data/dashboard.json',root),await read('data/dashbo
 await cp(new URL('public/vendor/',root),new URL('dist/vendor/',root),{recursive:true});
 
 for(const file of ['media-directory.json','media-directory-review.csv'])await writeFile(new URL('dist/data/'+file,root),await read('data/'+file));
+
+for(const file of ['ana-rivers.js','ana-river-parser.js'])await cp(new URL('public/'+file,root),new URL('dist/'+file,root));
+await cp(new URL('data/ana-rivers-snapshot.json',root),new URL('dist/data/ana-rivers-snapshot.json',root));

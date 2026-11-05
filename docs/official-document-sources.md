@@ -47,3 +47,15 @@ El conector revisa páginas públicas para localizar enlaces PDF explícitos, if
 - Vista dentro de Vigía mediante un Blob del PDF recibido, sin enviar el documento a Google Docs ni a Gemini.
 - Fechas de edición separadas de fechas de consulta. Ante una caída se pueden conservar documentos anteriores, identificados como tales.
 - Las pruebas de integración usan respuestas y un PDF de prueba; no constituyen validación contra las fuentes de producción.
+
+## ANA PRIOS: XLS aportado el 5 de noviembre de 2026
+
+El archivo binario BIFF `2026_11_05_13_05_02_276.xls` contiene el reporte 652-2026-ANA, consulta del 05/11/2026 e impresión a las 13:05 (Perú). Se incorporó una copia normalizada de 135 registros (137 filas, dos duplicados exactos), 23 departamentos y nueve registros de Piura. Se conserva la trazabilidad de las filas originales. El archivo XLS original no se publica en el repositorio.
+
+La vista «ANA · Ríos (XLS)» filtra por AAA, ALA, departamento y búsqueda de estación/río. Permite importar nuevas copias localmente (hasta 20) y exportar JSON. La fecha consultada se elige mediante la copia; no se puede pedir todavía otra fecha al portal desde Vigía. Las copias se ordenan por impresión y fecha de consulta, nunca por la hora de importación. No se envían a Gemini. Los datos guardados dependen del almacenamiento del navegador; conviene exportarlos.
+
+No se ha verificado la descarga automática: el nombre del adjunto no revela la URL ni el mecanismo del botón XLS. El acceso a la página de ANA desde este entorno está bloqueado por la política de red. No se inventó una API ni se implementó un postback a ciegas. Hasta identificar el enlace público o la solicitud de exportación, la carga es manual y no se presenta como actualización horaria.
+
+Los colores naranja/rojo son los del archivo, no una alerta calculada. Ausencia de resalte no significa seguridad. Se conservan unidades y valores originales; no se suman caudales y niveles. Seis registros tienen umbral rojo numéricamente menor que el naranja y se señalan para interpretación del operador. No hay fecha individual de observación, solo hora. La impresión no prueba la fecha de publicación ni la vigencia de todos los registros. Se conserva el aviso ANA de datos primarios sin control de calidad.
+
+Lectura XLS: SheetJS CE 0.20.3, distribución npm `@e965/xlsx` fijada en el lockfile; es una redistribución, no el paquete oficial del CDN. El módulo navegador se copia en `public/vendor/xlsx.mjs` con licencia Apache-2.0. Se comprueba firma CFB, tamaño máximo 5 MB y límite de filas. No se ejecutan macros ni fórmulas: solo se leen valores almacenados. Reimportación: `node scripts/import_ana_report.mjs archivo.xls`.
