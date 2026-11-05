@@ -1,12 +1,13 @@
 {
   "name": "observatorio-peru",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node server.js",
     "test": "node --test",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "vendor:cheerio": "node scripts/vendor-cheerio.mjs"
   },
   "engines": {
     "node": ">=24.5"
@@ -16,5 +17,8 @@
     "cheerio": "1.1.2",
     "fast-xml-parser": "^5.12.0",
     "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.11"
   }
 }

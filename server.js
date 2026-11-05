@@ -24,12 +24,12 @@ http.createServer(async(req,res)=>{
  if(origin){if(!same&&!allowed.includes(origin))return json(403,{error:'Este sitio no está autorizado para consultar el servidor.'});res.setHeader('Access-Control-Allow-Origin',origin);res.setHeader('Vary','Origin');}
  if(req.method==='OPTIONS'){res.writeHead(204,{'Access-Control-Allow-Methods':'GET, POST, OPTIONS','Access-Control-Allow-Headers':'Content-Type, Authorization','Access-Control-Max-Age':'600'});return res.end();}
  const path=new URL(req.url,'http://localhost').pathname;
- if(path==='/api/health')return json(200,{status:'ok',version:'0.9.0'});
- if(path==='/api/capabilities')return json(200,{version:'0.9.0',imageAnalysis:Boolean(process.env.GEMINI_API_KEY&&process.env.VIGIA_ACCESS_TOKEN),newsAnalysis:true,authenticationCheck:true,provider:'Gemini',requiresAccessCode:true});
+ if(path==='/api/health')return json(200,{status:'ok',version:'0.9.1'});
+ if(path==='/api/capabilities')return json(200,{version:'0.9.1',imageAnalysis:Boolean(process.env.GEMINI_API_KEY&&process.env.VIGIA_ACCESS_TOKEN),newsAnalysis:true,authenticationCheck:true,provider:'Gemini',requiresAccessCode:true});
  if(path==='/api/auth/check'){
   if(req.method!=='GET')return json(405,{error:'Usa GET.'});
   if(!authorized(req))return json(401,{error:'La clave de acceso del observatorio no es válida.',code:'INVALID_ACCESS_CODE'});
-  return json(200,{authenticated:true,version:'0.9.0'});
+  return json(200,{authenticated:true,version:'0.9.1'});
  }
  if(path==='/api/ana-rivers'){
   if(req.method!=='GET')return json(405,{error:'Usa GET.'});
