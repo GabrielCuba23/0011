@@ -12,6 +12,7 @@ html=html.replace('<link rel="stylesheet" href="/style.css">','<style>'+await re
 .replace('<script type="module" src="/dashboard.js"></script>','<script type="module">'+await read('public/dashboard.js')+'</script>')
 .replace('<script type="module" src="/image-analysis.js"></script>','<script type="module">'+await read('public/image-analysis.js')+'</script>')
 .replace('<script type="module" src="/desk.js"></script>','<script type="module">'+await read('public/desk.js')+'</script>')
+.replace('<script type="module" src="/media.js"></script>','<script type="module">'+await read('public/media.js')+'</script>')
 .replaceAll('href="/vendor/','href="./vendor/').replaceAll('src="/vendor/','src="./vendor/');
 await mkdir(new URL('dist/',root),{recursive:true});
 await writeFile(new URL('dist/index.html',root),html);
@@ -22,3 +23,5 @@ await mkdir(new URL('dist/data/',root),{recursive:true});
 await writeFile(new URL('dist/data/dashboard.json',root),await read('data/dashboard.json'));
 
 await cp(new URL('public/vendor/',root),new URL('dist/vendor/',root),{recursive:true});
+
+for(const file of ['media-directory.json','media-directory-review.csv'])await writeFile(new URL('dist/data/'+file,root),await read('data/'+file));

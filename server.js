@@ -6,8 +6,8 @@ import {fileURLToPath} from 'node:url';
 import {createHash,timingSafeEqual} from 'node:crypto';
 import {AnalysisError,analyzeImage,enrichLocations,diagnoseProvider,probeGeneration} from './lib/analyze.js';
 const root=fileURLToPath(new URL('./public/',import.meta.url));
-const files={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/report.js':'report.js','/dashboard.js':'dashboard.js','/image-analysis.js':'image-analysis.js','/desk.js':'desk.js','/vendor/leaflet.js':'vendor/leaflet.js','/vendor/leaflet.css':'vendor/leaflet.css','/vendor/images/layers.png':'vendor/images/layers.png','/vendor/images/layers-2x.png':'vendor/images/layers-2x.png','/data/dashboard.json':'../data/dashboard.json'};
-const types={html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8',json:'application/json; charset=utf-8',png:'image/png'};
+const files={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/report.js':'report.js','/dashboard.js':'dashboard.js','/image-analysis.js':'image-analysis.js','/desk.js':'desk.js','/vendor/leaflet.js':'vendor/leaflet.js','/vendor/leaflet.css':'vendor/leaflet.css','/vendor/images/layers.png':'vendor/images/layers.png','/vendor/images/layers-2x.png':'vendor/images/layers-2x.png','/data/dashboard.json':'../data/dashboard.json','/data/media-directory.json':'../data/media-directory.json','/data/media-directory-review.csv':'../data/media-directory-review.csv','/media.js':'media.js'};
+const types={html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8',json:'application/json; charset=utf-8',csv:'text/csv; charset=utf-8',png:'image/png'};
 const MAX_BODY=14*1024*1024;
 function body(req){return new Promise((resolve,reject)=>{let size=0,chunks=[],failed=false;req.on('data',chunk=>{size+=chunk.length;if(size>MAX_BODY){if(!failed){failed=true;chunks=[];reject(new AnalysisError('La imagen supera el tamaño permitido.',413));}}else if(!failed)chunks.push(chunk);});req.on('end',()=>{if(failed)return;try{resolve(JSON.parse(Buffer.concat(chunks).toString()));}catch{reject(new AnalysisError('Solicitud JSON inválida.'));}});req.on('error',()=>reject(new AnalysisError('Carga interrumpida.')));});}
 function authorized(req){const expected=process.env.VIGIA_ACCESS_TOKEN;if(!expected)return false;const actual=(req.headers.authorization||'').replace(/^Bearer /,'');const hash=x=>createHash('sha256').update(x).digest();return timingSafeEqual(hash(actual),hash(expected));}
@@ -20,16 +20,16 @@ http.createServer(async(req,res)=>{
  if(origin){if(!same&&!allowed.includes(origin))return json(403,{error:'Este sitio no está autorizado para consultar el servidor.'});res.setHeader('Access-Control-Allow-Origin',origin);res.setHeader('Vary','Origin');}
  if(req.method==='OPTIONS'){res.writeHead(204,{'Access-Control-Allow-Methods':'GET, POST, OPTIONS','Access-Control-Allow-Headers':'Content-Type, Authorization','Access-Control-Max-Age':'600'});return res.end();}
  const path=new URL(req.url,'http://localhost').pathname;
- if(path==='/api/health')return json(200,{status:'ok',version:'0.5.0'});
- if(path==='/api/capabilities')return json(200,{version:'0.5.0',imageAnalysis:Boolean(process.env.GEMINI_API_KEY&&process.env.VIGIA_ACCESS_TOKEN),newsAnalysis:true,authenticationCheck:true,provider:'Gemini',requiresAccessCode:true});
+ if(path==='/api/health')return json(200,{status:'ok',version:'0.6.0'});
+ if(path==='/api/capabilities')return json(200,{version:'0.6.0',imageAnalysis:Boolean(process.env.GEMINI_API_KEY&&process.env.VIGIA_ACCESS_TOKEN),newsAnalysis:true,authenticationCheck:true,provider:'Gemini',requiresAccessCode:true});
  if(path==='/api/auth/check'){
   if(req.method!=='GET')return json(405,{error:'Usa GET.'});
   if(!authorized(req))return json(401,{error:'La clave de acceso del observatorio no es válida.',code:'INVALID_ACCESS_CODE'});
-  return json(200,{authenticated:true,version:'0.5.0'});
+  return json(200,{authenticated:true,version:'0.6.0'});
  }
  if(path==='/api/dashboard'){
   if(req.method!=='GET')return json(405,{error:'Usa GET.'});
-  try{return json(200,await liveFeed.get(new URL(req.url,'http://localhost').searchParams.get('region')||'',{refresh:new URL(req.url,'http://localhost').searchParams.get('refresh')==='1',hours:new URL(req.url,'http://localhost').searchParams.get('hours')||24,terms:new URL(req.url,'http://localhost').searchParams.get('terms')||'',scope:new URL(req.url,'http://localhost').searchParams.get('scope')||'water',expanded:new URL(req.url,'http://localhost').searchParams.get('expanded')!=='0'}));}
+  try{return json(200,await liveFeed.get(new URL(req.url,'http://localhost').searchParams.get('region')||'',{refresh:new URL(req.url,'http://localhost').searchParams.get('refresh')==='1',hours:new URL(req.url,'http://localhost').searchParams.get('hours')||24,terms:new URL(req.url,'http://localhost').searchParams.get('terms')||'',scope:new URL(req.url,'http://localhost').searchParams.get('scope')||'water',expanded:new URL(req.url,'http://localhost').searchParams.get('expanded')!=='0',directory:new URL(req.url,'http://localhost').searchParams.get('directory')!=='0',mediaId:new URL(req.url,'http://localhost').searchParams.get('mediaId')||''}));}
   catch(e){return json(e.message==='BUSY'?429:400,{error:e.message==='BUSY'?'El buscador está ocupado. Reintenta dentro de un momento.':'Región o filtros de búsqueda no válidos.'});}
  }
  if(['/api/news/analyze','/api/news/extract','/api/news/import','/api/diagnostics/generate'].includes(path)){

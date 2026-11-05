@@ -10,6 +10,6 @@ test('Pages build embeds all application modules without unresolved imports',asy
  assert.ok(html.includes('function formatReport'));
  assert.ok(html.includes('geo-workspace'));
  assert.ok(!html.includes("from './report.js'"));
- for(const module of ['app','dashboard','image-analysis'])assert.ok(!html.includes(`src="/${module}.js"`));
+ for(const module of ['app','dashboard','image-analysis','desk','media'])assert.ok(!html.includes(`src="/${module}.js"`));
  assert.ok(!html.includes('id="latitude"'));
 });

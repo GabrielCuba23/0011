@@ -1,7 +1,7 @@
 import {formatReport} from './report.js';
 const $=s=>document.querySelector(s); const key='vigia-reports-v1'; let reports=[];
 try{const data=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(data))reports=data.filter(x=>x&&typeof x==='object'&&typeof x.region==='string');}catch{$('#save-message').textContent='No se pudo recuperar el almacenamiento local.';}
-const titles={overview:'Dashboard regional',desk:'Mesa de noticias',reports:'Reportes de eventos',images:'Análisis de imágenes',sources:'Fuentes oficiales'};
+const titles={overview:'Dashboard regional',desk:'Mesa de noticias',media:'Directorio de medios',reports:'Reportes de eventos',images:'Análisis de imágenes',sources:'Fuentes oficiales'};
 function view(name){document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==name);document.querySelectorAll('nav button').forEach(el=>el.classList.toggle('active',el.dataset.view===name));$('#heading').textContent=titles[name];document.dispatchEvent(new CustomEvent('vigia:view',{detail:name}));}
 document.querySelectorAll('[data-view]').forEach(el=>el.onclick=()=>view(el.dataset.view));
 $('#new-report').onclick=()=>{view('reports');$('#report-form').scrollIntoView({behavior:'smooth'});};
