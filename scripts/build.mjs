@@ -13,6 +13,7 @@ html=html.replace('<link rel="stylesheet" href="/style.css">','<style>'+await re
 .replace('<script type="module" src="/image-analysis.js"></script>','<script type="module">'+await read('public/image-analysis.js')+'</script>')
 .replace('<script type="module" src="/desk.js"></script>','<script type="module">'+await read('public/desk.js')+'</script>')
 .replace('<script type="module" src="/media.js"></script>','<script type="module">'+await read('public/media.js')+'</script>')
+.replace('<script type="module" src="/documents.js"></script>','<script type="module">'+await read('public/documents.js')+'</script>')
 .replaceAll('href="/vendor/','href="./vendor/').replaceAll('src="/vendor/','src="./vendor/');
 await mkdir(new URL('dist/',root),{recursive:true});
 await writeFile(new URL('dist/index.html',root),html);
