@@ -36,3 +36,5 @@ test('legacy official HTTP document links upgrade to verified HTTPS without perm
 test('relative PDF links follow the official portal base while missing URLs are excluded',()=>{
  const result=normalizeBulletins({data:[{title:'Prueba',publications:[{fileUrl:'/assets/test.pdf',date:'2026-11-05'},{date:'2026-11-05'}]}]},{id:'hydrological',label:'Hidrología'});assert.equal(result.documents[0].url,'https://observatorio.senamhi.gob.pe/assets/test.pdf');assert.equal(result.excluded,1);
 });
+
+test('ANA connection errors preserve the actionable cause instead of reporting an empty successful catalog',async()=>{const error=Object.assign(new TypeError('fetch failed'),{cause:{code:'CERT_HAS_EXPIRED'}});const library=createDocumentLibrary({fetchImpl:async()=>{throw error;}});const result=await library.get('ana');assert.equal(result.state,'error');assert.equal(result.errorCode,'OFFICIAL_TLS_FAILED');assert.equal(result.lastSuccessAt,null);assert.match(result.notes[0],/certificado HTTPS/);});
